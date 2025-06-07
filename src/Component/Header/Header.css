@@ -40,6 +40,7 @@
 
 /* Search */
 .search-input {
+  max-width: 5rem;
   padding: 6px 12px;
   font-size: 12px;
   border: 1px solid #ccc; /* Light gray border */
@@ -76,5 +77,9 @@
   .header-right {
     width: 30%;
     justify-content: flex-end;
+  }
+
+  .search-input {
+    min-width: 10rem;
   }
 }
