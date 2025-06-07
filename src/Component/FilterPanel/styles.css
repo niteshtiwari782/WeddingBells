@@ -1,0 +1,43 @@
+.FilterPanelContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.FilterTitle {
+  background-color: #ffc629;
+  color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.scroll-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  height: min-content; /* or any height you want */
+  overflow-x: auto; /* enables vertical scrolling */
+  padding: 12px;
+  scroll-behavior: smooth; /* smooth scroll */
+}
+
+/* Optional: individual item styling */
+.scroll-item {
+  padding: 10px;
+  background: white;
+  flex-shrink: 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+}
+
+@media (max-width: 600px) {
+  .FilterTitle {
+    width: 18%;
+  }
+  .scroll-container {
+    width: 82%;
+  }
+}

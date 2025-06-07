@@ -1,0 +1,80 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: #ffc629;
+  color: white;
+  padding: 6px 12px; /* reduced padding */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Common sections */
+.header-left,
+.header-center,
+.header-right {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  justify-content: center;
+  margin: 4px 0;
+}
+
+/* Icons & Title */
+.menu-button,
+.user-icon {
+  font-size: 18px; /* smaller icons */
+}
+
+.site-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Search */
+.search-input {
+  padding: 6px 12px;
+  font-size: 12px;
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 6px; /* Soft rounded corners */
+  outline: none; /* Remove default outline */
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  background-color: white;
+  color: #333;
+}
+
+.search-input:focus {
+  border-color: #0077ff; /* Blue border on focus */
+  box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.2); /* Soft glow */
+}
+
+/* Tablet and up */
+@media (min-width: 600px) {
+  .header {
+    flex-wrap: nowrap;
+  }
+
+  .header-left {
+    width: 30%;
+    justify-content: flex-start;
+  }
+
+  .header-center {
+    width: 40%;
+    justify-content: center;
+  }
+
+  .header-right {
+    width: 30%;
+    justify-content: flex-end;
+  }
+}
