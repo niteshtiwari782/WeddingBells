@@ -1,31 +1,35 @@
 import React from 'react';
-import { FaMapSigns } from 'react-icons/fa';
-import { FaCircleUser, FaFilter, FaIndianRupeeSign, FaRegCalendarPlus } from 'react-icons/fa6';
+import { FaChevronDown } from 'react-icons/fa6';
+import { HiOutlineAdjustmentsHorizontal } from 'react-icons/hi2';
 import './styles.css';
 
 export default function FilterPane() {
   return (
     <div className="FilterPanelContainer">
       <div className="FilterTitle">
-        <FaFilter />
+        <HiOutlineAdjustmentsHorizontal size={20} />
         <label>Filters</label>
       </div>
       <div className="scroll-container">
         <div className="scroll-item">
           <label>Date</label>
-          <FaRegCalendarPlus />
+          <FaChevronDown />
         </div>
         <div className="scroll-item">
           <label>Budget</label>
-          <FaIndianRupeeSign />
+          <FaChevronDown />
         </div>
         <div className="scroll-item">
           <label>Location</label>
-          <FaMapSigns />
+          <FaChevronDown />
         </div>
         <div className="scroll-item">
           <label>Guests</label>
-          <FaCircleUser />
+          <FaChevronDown />
+        </div>
+        <div className="scroll-item">
+          <label>Ratings</label>
+          <FaChevronDown />
         </div>
       </div>
     </div>

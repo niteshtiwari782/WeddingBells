@@ -9,15 +9,15 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-left">
-        <IoMenu />
-        <h1 className="site-title">FindMyvenU</h1>
+        <IoMenu size={30} />
+        <h1 className="site-title">FindMyVenu</h1>
       </div>
 
       <div className="header-center"></div>
 
       <div className="header-right">
         <input type="text" className="search-input" placeholder="Search venues..." />
-        <FaRegUser />
+        <FaRegUser size={20} />
       </div>
     </header>
   );
