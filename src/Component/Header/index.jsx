@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FaRegUser } from 'react-icons/fa';
+import { FaSearchLocation, FaUserPlus } from 'react-icons/fa';
 import { IoMenu } from 'react-icons/io5';
 
 import './Header.css';
@@ -17,7 +17,8 @@ const Header = () => {
 
       <div className="header-right">
         <input type="text" className="search-input" placeholder="Search venues..." />
-        <FaRegUser size={20} />
+        <FaSearchLocation className="search-icon" />
+        <FaUserPlus size={20} />
       </div>
     </header>
   );

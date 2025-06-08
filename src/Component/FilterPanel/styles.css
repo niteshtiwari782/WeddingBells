@@ -11,9 +11,10 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
-  border: 1px solid #3f3f46;
+  /* border: 1px solid #3f3f46; */
   border-radius: 9999px;
   flex-shrink: 0;
+  background: white;
   padding: 10px;
 }
 
@@ -36,7 +37,7 @@
   padding: 10px;
   background: white;
   flex-shrink: 0;
-  border: 1px solid #3f3f46;
+  /* border: 1px solid #3f3f46; */
   border-radius: 9999px;
 }
 

@@ -58,8 +58,17 @@
   box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.2); /* Soft glow */
 }
 
+@media (max-width: 600px) {
+  .search-input {
+    display: none;
+  }
+}
+
 /* Tablet and up */
 @media (min-width: 600px) {
+  .search-icon {
+    display: none;
+  }
   .header {
     flex-wrap: nowrap;
   }
