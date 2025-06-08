@@ -54,15 +54,17 @@ const VenueInformation = ({ venue }) => {
         <div className="venue-capacity">
           <div className="venue-capacity-title">Capacity :</div>
           <div className="venue-capacity-value">
-            {venue.capacity}
-            <FaRegUser />
+            <div style={{ fontSize: '10px' }}>{venue.capacity}</div>
+            <div style={{ paddingTop: '3px' }}>
+              <FaRegUser />
+            </div>
           </div>
         </div>
       </div>
       <div className="venue-secondaryInfo">
         <div className="venueRatings">
           <div className="ratingsInfo">
-            <label className="customerRatingTitle">Customer Ratings :</label>
+            <label className="customerRatingTitle">Customer Ratings</label>
             <div className="customerRatingValueContainer">
               <div className="customerRatingValue">
                 {Array.from({ length: venue.rating }).map((_, index) => (
