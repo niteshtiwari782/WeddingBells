@@ -31,7 +31,7 @@ const VenueInformation = ({ venue }) => {
           {Array.from({ length: venue.venueStar }).map((_, index) => (
             <FaStar size={5} color="gray" />
           ))}
-          <label>3 Star Venue</label>
+          <label>{venue.venueStar} Star Venue</label>
         </div>
         {venue.isOnlyVeg && (
           <div className="venue-food-option">
@@ -60,7 +60,6 @@ const VenueInformation = ({ venue }) => {
               <div className="customerRatingValue">
                 {venue.rating} <FaStar color="#ffc629" size={8} />{' '}
               </div>
-              <div>({venue.reviewsCount})</div>
             </div>
           </div>
           <div className="reviewInfo">
