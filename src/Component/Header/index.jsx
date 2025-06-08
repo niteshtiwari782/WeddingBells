@@ -10,7 +10,7 @@ const Header = () => {
     <header className="header">
       <div className="header-left">
         <IoMenu size={30} />
-        <h1 className="site-title">FindMyVenu</h1>
+        <h1 className="site-title">FindMYVenu</h1>
       </div>
 
       <div className="header-center"></div>
