@@ -1,11 +1,14 @@
 .venue-container {
-  width: 100%;
+  width: 95%;
   max-width: 1280px;
+  overflow-y: auto;
+  height: fit-content;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  padding: 1rem;
+  background-color: #f3f4f6;
+  padding: 1rem 0rem 1rem 1rem;
   justify-content: flex-start;
 }
 

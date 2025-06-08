@@ -1,4 +1,6 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import { FaLocationArrow, FaRegUser, FaStar } from 'react-icons/fa';
 import nonveg from '../../assets/showcaseImages/nonveg.png';
 import veg from '../../assets/showcaseImages/veg.png';
@@ -8,10 +10,11 @@ import './VenueShowcase.css';
 const venues = venueShowcase;
 
 const VenueShowcase = () => {
+  const navigate = useNavigate();
   return (
     <div className="venue-container">
       {venues.map(venue => (
-        <div className="venue-card" key={venue.id}>
+        <div className="venue-card" key={venue.id} onClick={() => navigate(`/venue/${venue.id}`)}>
           <img src={venue.img} className="venue-card-image" />
           <VenueInformation venue={venue} />
         </div>

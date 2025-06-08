@@ -17,8 +17,8 @@ const Header = () => {
 
       <div className="header-right">
         <input type="text" className="search-input" placeholder="Search venues..." />
-        <FaSearchLocation className="search-icon" />
-        <FaUserPlus size={20} />
+        <FaSearchLocation size={25} className="search-icon" />
+        <FaUserPlus size={25} />
       </div>
     </header>
   );
