@@ -8,13 +8,13 @@
   flex-wrap: wrap;
   gap: 16px;
   background-color: #f3f4f6;
-  padding: 1rem 0rem 1rem 1rem;
+  padding: 0rem 0rem 1rem 1rem;
   justify-content: flex-start;
 }
 
 .venue-card {
   border-radius: 12px;
-  flex: 0 1 90%; /* Default: full width */
+  flex: 0 1 96%; /* Default: full width */
   max-width: 100%;
   text-align: center;
   overflow: hidden;

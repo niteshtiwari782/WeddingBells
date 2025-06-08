@@ -11,8 +11,8 @@
   gap: 8px;
   font-weight: bolder !important;
   background: transparent;
-  padding: 10px 16px;
-  font-size: 24px;
+  padding: 8px 16px;
+  font-size: 1rem;
   border: none;
   cursor: pointer;
 }
