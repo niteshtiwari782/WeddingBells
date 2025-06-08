@@ -13,6 +13,7 @@ const VenueShowcaseData = [
     reviewsCount: 23,
     badgeValue: 'Excellent',
     startPrice: 40000,
+    capacity: 500,
   },
   {
     id: 2,
@@ -26,6 +27,7 @@ const VenueShowcaseData = [
     reviewsCount: 43,
     badgeValue: 'Very Good',
     startPrice: 34000,
+    capacity: 300,
   },
   {
     id: 3,
@@ -39,6 +41,7 @@ const VenueShowcaseData = [
     reviewsCount: 13,
     badgeValue: 'Good',
     startPrice: 20000,
+    capacity: 1000,
   },
   {
     id: 4,
@@ -52,6 +55,7 @@ const VenueShowcaseData = [
     reviewsCount: 56,
     badgeValue: 'Excellent',
     startPrice: 48000,
+    capacity: 400,
   },
 ];
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLocationArrow, FaStar } from 'react-icons/fa';
+import { FaLocationArrow, FaRegUser, FaStar } from 'react-icons/fa';
 import nonveg from '../../assets/showcaseImages/nonveg.png';
 import veg from '../../assets/showcaseImages/veg.png';
 import venueShowcase from '../../data/venueShowcase';
@@ -51,6 +51,13 @@ const VenueInformation = ({ venue }) => {
           <FaLocationArrow size={10} />
           {venue.area}
         </div>
+        <div className="venue-capacity">
+          <div className="venue-capacity-title">Capacity :</div>
+          <div className="venue-capacity-value">
+            {venue.capacity}
+            <FaRegUser />
+          </div>
+        </div>
       </div>
       <div className="venue-secondaryInfo">
         <div className="venueRatings">
@@ -58,7 +65,9 @@ const VenueInformation = ({ venue }) => {
             <label className="customerRatingTitle">Customer Ratings :</label>
             <div className="customerRatingValueContainer">
               <div className="customerRatingValue">
-                {venue.rating} <FaStar color="#ffc629" size={8} />{' '}
+                {Array.from({ length: venue.rating }).map((_, index) => (
+                  <FaStar color="#ffc629" size={12} />
+                ))}
               </div>
             </div>
           </div>
@@ -71,6 +80,7 @@ const VenueInformation = ({ venue }) => {
         <div className="venue-meta">
           <div className="venue-price-label">Starts from</div>
           <span className="venue-price-value">₹{venue.startPrice}</span>
+          <span className="venue-price-subtext">for 100 Guests</span>
         </div>
       </div>
     </div>
