@@ -1,0 +1,58 @@
+import { garden, goldenLight, lalit, sayaji } from '../assets/showcaseImages';
+
+const VenueShowcaseData = [
+  {
+    id: 1,
+    name: 'Royal Palace',
+    location: 'Indore',
+    img: lalit,
+    venueStar: 3,
+    rating: 5,
+    isOnlyVeg: true,
+    area: 'Palasia',
+    reviewsCount: 23,
+    badgeValue: 'Excellent',
+    startPrice: 40000,
+  },
+  {
+    id: 2,
+    name: 'Sunshine Garden',
+    location: 'Bhopal',
+    img: garden,
+    venueStar: 3,
+    rating: 4,
+    isOnlyVeg: false,
+    area: 'Vijay Nagar',
+    reviewsCount: 43,
+    badgeValue: 'Very Good',
+    startPrice: 34000,
+  },
+  {
+    id: 3,
+    name: 'Moonlight Banquet',
+    location: 'Ujjain',
+    img: sayaji,
+    venueStar: 3,
+    rating: 3,
+    isOnlyVeg: true,
+    area: 'Bhawarkua',
+    reviewsCount: 13,
+    badgeValue: 'Good',
+    startPrice: 20000,
+  },
+  {
+    id: 4,
+    name: 'Emerald Venue',
+    location: 'Dewas',
+    img: goldenLight,
+    venueStar: 3,
+    rating: 5,
+    isOnlyVeg: true,
+    area: 'Vijay Nagar',
+    reviewsCount: 56,
+    badgeValue: 'Excellent',
+    startPrice: 48000,
+  },
+];
+
+export default VenueShowcaseData;

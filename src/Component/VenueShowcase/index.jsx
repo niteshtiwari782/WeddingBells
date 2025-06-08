@@ -1,55 +1,11 @@
 import React from 'react';
 import { FaLocationArrow, FaStar } from 'react-icons/fa';
-import garden from '../../assets/showcaseImages/garden.jpg';
-import goldenLight from '../../assets/showcaseImages/goldenLight.jpg';
-import lalit from '../../assets/showcaseImages/lalit.jpg';
 import nonveg from '../../assets/showcaseImages/nonveg.png';
-import sayaji from '../../assets/showcaseImages/sayaji.jpg';
 import veg from '../../assets/showcaseImages/veg.png';
+import venueShowcase from '../../data/venueShowcase';
 import './VenueShowcase.css';
 
-const venues = [
-  {
-    id: 1,
-    name: 'Royal Palace',
-    location: 'Indore',
-    img: lalit,
-    venueStar: 3,
-    rating: 4,
-    isOnlyVeg: true,
-    area: 'Palasia',
-  },
-  {
-    id: 2,
-    name: 'Sunshine Garden',
-    location: 'Bhopal',
-    img: garden,
-    venueStar: 3,
-    rating: 4,
-    isOnlyVeg: false,
-    area: 'Vijay Nagar',
-  },
-  {
-    id: 3,
-    name: 'Moonlight Banquet',
-    location: 'Ujjain',
-    img: sayaji,
-    venueStar: 3,
-    rating: 4,
-    isOnlyVeg: true,
-    area: 'Bhawarkua',
-  },
-  {
-    id: 4,
-    name: 'Emerald Venue',
-    location: 'Dewas',
-    img: goldenLight,
-    venueStar: 3,
-    rating: 4,
-    isOnlyVeg: true,
-    area: 'Vijay Nagar',
-  },
-];
+const venues = venueShowcase;
 
 const VenueShowcase = () => {
   return (
@@ -99,21 +55,23 @@ const VenueInformation = ({ venue }) => {
       <div className="venue-secondaryInfo">
         <div className="venueRatings">
           <div className="ratingsInfo">
-            <label>Rating</label>
-            <div>
-              {Array.from({ length: venue.rating }).map((_, index) => (
-                <FaStar color="#ffc629" size={8} />
-              ))}
+            <label className="customerRatingTitle">Customer Ratings :</label>
+            <div className="customerRatingValueContainer">
+              <div className="customerRatingValue">
+                {venue.rating} <FaStar color="#ffc629" size={8} />{' '}
+              </div>
+              <div>({venue.reviewsCount})</div>
             </div>
           </div>
           <div className="reviewInfo">
-            <div className="ratingBadge">Very Good</div>
-            <label>44 Reviews</label>
+            <div className="ratingBadge">{venue.badgeValue}</div>
+            <label>{venue.reviewsCount} Reviews</label>
           </div>
         </div>
 
         <div className="venue-meta">
-          <span className="venue-price">Starts from ₹76,000</span>
+          <div className="venue-price-label">Starts from</div>
+          <span className="venue-price-value">₹{venue.startPrice}</span>
         </div>
       </div>
     </div>
