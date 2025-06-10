@@ -1,0 +1,36 @@
+.venueDetailContainer {
+  background-color: #f3f4f6;
+}
+
+.venueDetailHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 2px 12px;
+}
+
+.venueDetailTitle {
+  font-size: 1rem;
+}
+
+.getQuotationBtn {
+  color: white;
+  border-radius: 9999px;
+  background-color: #0369a1;
+  padding: 5px;
+  margin: 8px;
+  font-size: 12px;
+}
+
+@media (max-width: 600px) {
+  .venueDetailTitle {
+    font-size: 12px;
+  }
+
+  .getQuotationBtn {
+    padding: 2px;
+    margin: 4px;
+    font-size: 8px;
+  }
+}

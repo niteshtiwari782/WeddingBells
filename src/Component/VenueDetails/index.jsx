@@ -1,45 +1,34 @@
-import React, { useState } from 'react';
-import Carousel from '../Carousel';
-import './VenuePhotoShowcase.css';
+import React, { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 
-import { garden, goldenLight, goldenRoom, lalit, sayaji } from '../../assets/showcaseImages';
+import './styles.css';
+import VenuePhotoShowcase from './VenuePhotoShowcase';
 
-const VenuePhotoShowcase = () => {
-  const images = [goldenRoom, sayaji, garden, goldenLight, lalit];
+import { fetchVenueDetails } from '../../service/venueDetailService';
 
-  const [showCarousel, setShowCarousel] = useState(false);
-  const [startIndex, setStartIndex] = useState(0);
+export default function VenueDetails() {
+  const [searchParams] = useSearchParams();
 
-  const openCarousel = (index = 0) => {
-    setStartIndex(index);
-    setShowCarousel(true);
-  };
+  const [venueData, setVenueData] = useState([]);
+
+  const id = searchParams.get('id');
+
+  useEffect(() => {
+    const res = fetchVenueDetails(parseInt(id));
+    setVenueData(prevState => res[0]);
+  }, []);
+
+  useEffect(() => {
+    console.log(venueData);
+  }, [venueData]);
 
   return (
-    <>
-      <div className="gallery-container">
-        <div className="main-thumbnail">
-          <img src={images[0]} alt="Main" />
-        </div>
-
-        <div className="side-tiles">
-          <div className="tile" onClick={() => openCarousel(1)}>
-            <img src={images[1]} alt="Side 1" />
-          </div>
-          <div className="tile" onClick={() => openCarousel(2)}>
-            <img src={images[2]} alt="Side 2" />
-          </div>
-          <div className="tile show-more-tile" onClick={() => openCarousel(0)}>
-            <img src={images[3]} alt="Show More Background" className="blur-bg" />
-            <div className="overlay-text">20 more images</div>
-          </div>
-        </div>
+    <div className="venueDetailContainer">
+      <div className="venueDetailHeader">
+        <div className="venueDetailTitle">{venueData?.name}</div>
+        <button className="getQuotationBtn">Get Quotation</button>
       </div>
-      {showCarousel && (
-        <Carousel images={images} startIndex={startIndex} onClose={() => setShowCarousel(false)} />
-      )}
-    </>
+      <VenuePhotoShowcase />
+    </div>
   );
-};
-
-export default VenuePhotoShowcase;
+}

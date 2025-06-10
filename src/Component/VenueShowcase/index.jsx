@@ -14,7 +14,11 @@ const VenueShowcase = () => {
   return (
     <div className="venue-container">
       {venues.map(venue => (
-        <div className="venue-card" key={venue.id} onClick={() => navigate(`/venue/${venue.id}`)}>
+        <div
+          className="venue-card"
+          key={venue.id}
+          onClick={() => navigate(`/venue?id=${venue.id}`)}
+        >
           <img src={venue.img} className="venue-card-image" />
           <VenueInformation venue={venue} />
         </div>

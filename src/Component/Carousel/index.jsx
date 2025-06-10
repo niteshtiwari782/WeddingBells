@@ -1,4 +1,8 @@
 import React, { useEffect, useState } from 'react';
+
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
+import { IoMdClose } from 'react-icons/io';
+
 import './Carousel.css';
 
 const Carousel = ({ images, startIndex = 0, onClose }) => {
@@ -22,30 +26,30 @@ const Carousel = ({ images, startIndex = 0, onClose }) => {
     <div className="carousel-overlay" onClick={onClose}>
       <img src={images[index]} alt={`Slide ${index}`} />
       <div className="carousel-controls">
-        <button
+        <div
           onClick={e => {
             e.stopPropagation();
             prev();
           }}
         >
-          Previous
-        </button>
-        <button
-          onClick={e => {
-            e.stopPropagation();
-            next();
-          }}
-        >
-          Next
-        </button>
-        <button
+          <FaChevronLeft color="white" size={20} />
+        </div>
+        <div
           onClick={e => {
             e.stopPropagation();
             onClose();
           }}
         >
-          Close
-        </button>
+          <IoMdClose color="white" size={20} />
+        </div>
+        <div
+          onClick={e => {
+            e.stopPropagation();
+            next();
+          }}
+        >
+          <FaChevronRight color="white" size={20} />
+        </div>
       </div>
     </div>
   );
