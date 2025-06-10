@@ -1,7 +1,7 @@
 .gallery-container {
   display: flex;
   width: 65%;
-  padding: 2rem;
+  padding: 1rem;
   height: 600px;
   gap: 10px;
 }
