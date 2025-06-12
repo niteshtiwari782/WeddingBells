@@ -1,0 +1,49 @@
+.editable-input {
+  width: 40%;
+  padding: 6px;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 2px solid #6b7280;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.editable-inputContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 4px 0; /* reduces height */
+  font-size: 1rem;
+}
+
+.editable-input:focus {
+  border-color: #0073e6;
+}
+
+.editable-menu {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  top: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 999;
+  margin-top: 4px;
+  padding: 1rem;
+  list-style-type: none;
+}
+
+@media (max-width: 600px) {
+  .editable-dropdown {
+    max-width: 100%;
+  }
+
+  .editable-input {
+    width: 50%;
+  }
+}

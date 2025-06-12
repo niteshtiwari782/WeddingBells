@@ -6,22 +6,27 @@ import VenuePhotoShowcase from './VenuePhotoShowcase';
 
 import { FaChevronLeft, FaStar } from 'react-icons/fa6';
 import { fetchVenueDetails } from '../../service/venueDetailService';
+import EditableDropdown from '../Dropdown';
+
+const guestMenuOptions = [100, 200, 300, 400];
 
 export default function VenueDetails() {
   const [searchParams] = useSearchParams();
 
   const [venueData, setVenueData] = useState([]);
 
+  const [guestCount, setGuestCount] = useState(100);
+
   const id = searchParams.get('id');
+
+  const handleSelect = value => {
+    setGuestCount(prevState => value);
+  };
 
   useEffect(() => {
     const res = fetchVenueDetails(parseInt(id));
     setVenueData(prevState => res[0]);
   }, []);
-
-  useEffect(() => {
-    console.log(venueData);
-  }, [venueData]);
 
   return (
     <div className="venueDetailContainer">
@@ -54,6 +59,46 @@ export default function VenueDetails() {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="venue-detail-capacity">
+            <label className="venue-detail-capacity-title">Capacity</label>
+            <div className="venue-detail-capacity-container">
+              {venueData.capacityList?.map((num, i) => (
+                <span className="list-item" key={i}>
+                  {num}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div className="venue-detail-capacity">
+            <label className="venue-detail-capacity-title">Facilites</label>
+            <div className="venue-detail-capacity-container">
+              {venueData.facilitiesList?.map((num, i) => (
+                <span className="list-item" key={i}>
+                  {num}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div className="venuePriceNGuestContainer">
+            <div className="guestCountFilterContainer">
+              <div className="guestCountFilterLabel">
+                <div>No. of Guests :</div>
+              </div>
+              <EditableDropdown
+                value={guestCount}
+                onSelect={handleSelect}
+                options={guestMenuOptions}
+                label="No. of Guests"
+              />
+            </div>
+            <div className="venueCost">
+              <div className="venue-detail-price-label">Starts from</div>
+              <span className="venue-detail-price-value">₹{venueData.startPrice}</span>
+            </div>
+          </div>
+          <div className="checkAvailBtnContainer">
+            <button className="checkAvailBtn">Check Availability</button>
           </div>
         </div>
       </div>

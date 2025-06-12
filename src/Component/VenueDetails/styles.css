@@ -20,16 +20,16 @@
 }
 
 .venueDetailTitle {
-  font-size: 20px;
+  font-size: 32px;
 }
 
 .getQuotationBtn {
   color: white;
   border-radius: 9999px;
-  background-color: #0369a1;
+  background-color: #003580;
   padding: 5px;
   margin: 8px;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .venueMetaDetailsContainer {
@@ -44,12 +44,38 @@
 .venueMetaDetailsContent {
   width: 35%;
   display: flex;
+  flex-direction: column;
+}
+
+.venue-detail-capacity {
+  flex-direction: column;
+  display: flex;
+  margin: 1rem;
+  gap: 1rem;
+}
+
+.venue-detail-capacity-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.list-item::before {
+  content: '•';
+  margin: 0 12px;
+}
+
+.venue-detail-capacity-title {
+  font-size: 18px;
 }
 
 .venueNameNRatingContainer {
   display: flex;
-  width: 100%;
-  margin: 1rem 1rem 0rem 1rem;
+  margin: 0rem 1rem 1rem 1rem;
   align-items: flex-start;
   flex-direction: column;
   justify-content: space-between;
@@ -70,7 +96,7 @@
 }
 
 .venueDetailsRatingBadge {
-  background-color: #0369a1;
+  background-color: #003580;
   padding: 4px;
   color: white;
   font-size: 10px;
@@ -86,9 +112,91 @@
   align-items: center;
 }
 
+.venueCost {
+  width: 40%;
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+}
+
+.venue-detail-price-label {
+  color: #ffc629;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: right;
+}
+
+.checkAvailBtnContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.checkAvailBtn {
+  width: 90%;
+  font-size: 24px;
+  background-color: #003580;
+  color: white;
+}
+
+.venue-detail-price-value {
+  color: #ffc629;
+  font-weight: 600;
+  font-size: 22px;
+  text-align: right;
+}
+
+.guestCountFilterLabel {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.venuePriceNGuestContainer {
+  display: flex;
+  margin: 1rem 1rem 1rem 1rem;
+  justify-content: space-between;
+}
+
+.guestCountFilterContainer {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 10px;
+  flex-direction: row;
+}
+
+.guestCountFilter {
+  margin-right: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
 @media (max-width: 600px) {
   .venueMetaDetailsContent {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .guestCountFilterLabel {
+    font-size: 12px;
+  }
+
+  .venue-detail-price-label {
+    color: #ffc629;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .venue-detail-price-value {
+    color: #ffc629;
+    font-weight: 600;
+    font-size: 24px;
+    text-align: left;
+  }
+
+  .guestCountFilterContainer {
+    margin-right: 1rem;
   }
 
   .detailsReviewInfo {

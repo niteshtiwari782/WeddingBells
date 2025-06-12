@@ -14,6 +14,8 @@ const VenueDetailData = [
     badgeValue: 'Excellent',
     startPrice: 40000,
     capacity: 500,
+    capacityList: ['Total Guests: 500', 'Total Rooms: 40', 'Total Parking: 100'],
+    facilitiesList: ['In-house DJ Present', 'Outside Decorator Allowed', 'Alcohol Not Allowed'],
   },
   {
     id: 2,
@@ -28,6 +30,8 @@ const VenueDetailData = [
     badgeValue: 'Very Good',
     startPrice: 34000,
     capacity: 300,
+    capacityList: ['Total Guests: 500', 'Total Rooms: 40', 'Total Parking: 100'],
+    facilitiesList: ['In-house DJ Present', 'Outside Decorator Allowed', 'Alcohol Not Allowed'],
   },
   {
     id: 3,
@@ -42,6 +46,8 @@ const VenueDetailData = [
     badgeValue: 'Good',
     startPrice: 20000,
     capacity: 1000,
+    capacityList: ['Total Guests: 500', 'Total Rooms: 40', 'Total Parking: 100'],
+    facilitiesList: ['In-house DJ Present', 'Outside Decorator Allowed', 'Alcohol Not Allowed'],
   },
   {
     id: 4,
@@ -56,6 +62,8 @@ const VenueDetailData = [
     badgeValue: 'Excellent',
     startPrice: 48000,
     capacity: 400,
+    capacityList: ['Total Guests: 500', 'Total Rooms: 40', 'Total Parking: 100'],
+    facilitiesList: ['In-house DJ Present', 'Outside Decorator Allowed', 'Alcohol Not Allowed'],
   },
 ];
 
