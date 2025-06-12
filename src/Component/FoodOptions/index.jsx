@@ -3,6 +3,7 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 import { TiTick } from 'react-icons/ti';
 import './HorizontalCardScroll.css';
 
+import { formattedAmount } from '../../utility';
 import Carousel from '../Carousel';
 
 function HorizontalCardScroll({ title, foodOptions, foodImages, handlePlatePrice }) {
@@ -30,13 +31,18 @@ function HorizontalCardScroll({ title, foodOptions, foodImages, handlePlatePrice
     if (isSelected) {
       return (
         <div className="selectedBtn">
-          <label>{price}</label>
+          <label>{formattedAmount(price)}</label>
           <TiTick />
         </div>
       );
     }
 
-    return <div>Add</div>;
+    return (
+      <div className="selectedBtn">
+        <label>{formattedAmount(price)}</label>
+        <label>Add</label>
+      </div>
+    );
   };
 
   return (
@@ -84,7 +90,11 @@ function HorizontalCardScroll({ title, foodOptions, foodImages, handlePlatePrice
         </button>
       </div>
       {showCarousel && (
-        <Carousel images={images} startIndex={startIndex} onClose={() => setShowCarousel(false)} />
+        <Carousel
+          images={foodImages}
+          startIndex={startIndex}
+          onClose={() => setShowCarousel(false)}
+        />
       )}
     </div>
   );

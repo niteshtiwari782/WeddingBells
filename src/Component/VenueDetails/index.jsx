@@ -6,6 +6,7 @@ import VenuePhotoShowcase from './VenuePhotoShowcase';
 
 import { FaStar } from 'react-icons/fa6';
 import { fetchVenueDetails } from '../../service/venueDetailService';
+import { formattedAmount } from '../../utility';
 import EditableDropdown from '../Dropdown';
 import HorizontalCardScroll from '../FoodOptions';
 
@@ -40,14 +41,6 @@ export default function VenueDetails() {
 
   const handlePlatePrice = val => {
     setPlatePrice(prevState => val);
-  };
-
-  const formattedAmount = amount => {
-    return new Intl.NumberFormat('en-IN', {
-      style: 'currency',
-      currency: 'INR',
-      maximumFractionDigits: 0,
-    }).format(amount);
   };
 
   return (

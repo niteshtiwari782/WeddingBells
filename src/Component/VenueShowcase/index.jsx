@@ -5,6 +5,7 @@ import { FaLocationArrow, FaRegUser, FaStar } from 'react-icons/fa';
 import nonveg from '../../assets/showcaseImages/nonveg.png';
 import veg from '../../assets/showcaseImages/veg.png';
 import venueShowcase from '../../data/venueShowcase';
+import { formattedAmount } from '../../utility';
 import './VenueShowcase.css';
 
 const venues = venueShowcase;
@@ -88,7 +89,7 @@ const VenueInformation = ({ venue }) => {
 
         <div className="venue-meta">
           <div className="venue-price-label">Starts from</div>
-          <span className="venue-price-value">₹{venue.startPrice}</span>
+          <span className="venue-price-value">{formattedAmount(venue.startPrice)}</span>
           <span className="venue-price-subtext">for 100 Guests</span>
         </div>
       </div>

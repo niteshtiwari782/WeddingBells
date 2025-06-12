@@ -52,7 +52,7 @@
   flex-direction: column;
   display: flex;
   margin: 1rem;
-  gap: 1rem;
+  gap: 4px;
 }
 
 .venue-detail-capacity-container {
