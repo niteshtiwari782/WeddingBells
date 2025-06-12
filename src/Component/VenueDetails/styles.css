@@ -38,6 +38,7 @@
   justify-content: space-between;
   background-color: white;
   margin: 1rem;
+  margin-bottom: 0rem;
   border-radius: 16px;
 }
 
@@ -75,7 +76,7 @@
 
 .venueNameNRatingContainer {
   display: flex;
-  margin: 0rem 1rem 1rem 1rem;
+  margin: 0.5rem 1rem 1rem 1rem;
   align-items: flex-start;
   flex-direction: column;
   justify-content: space-between;
@@ -129,6 +130,7 @@
 .checkAvailBtnContainer {
   display: flex;
   justify-content: center;
+  margin-bottom: 0.5rem;
 }
 
 .checkAvailBtn {
@@ -171,6 +173,18 @@
 }
 
 @media (max-width: 600px) {
+  .venueNameNRatingContainer {
+    margin: 0rem 1rem 0.5rem 1rem;
+  }
+
+  .venue-detail-capacity {
+    margin: 0rem 1rem 0.5rem 1rem;
+  }
+
+  .venuePriceNGuestContainer {
+    margin: 0rem 1rem 0.5rem 1rem;
+  }
+
   .venueMetaDetailsContent {
     width: 100%;
     display: flex;

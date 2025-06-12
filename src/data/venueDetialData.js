@@ -1,5 +1,7 @@
 import { garden, goldenLight, lalit, sayaji } from '../assets/showcaseImages';
 
+import { bread, drink, icecream, salad, sweet } from '../assets/foodMenu';
+
 const VenueDetailData = [
   {
     id: 1,
@@ -16,6 +18,13 @@ const VenueDetailData = [
     capacity: 500,
     capacityList: ['Total Guests: 500', 'Total Rooms: 40', 'Total Parking: 100'],
     facilitiesList: ['In-house DJ Present', 'Outside Decorator Allowed', 'Alcohol Not Allowed'],
+    foodOption: [
+      { id: 1, title: 'Silver', price: 1200 },
+      { id: 2, title: 'Platinum', price: 1500 },
+      { id: 3, title: 'Gold', price: 1800 },
+      { id: 4, title: 'Royal', price: 2000 },
+    ],
+    foodImages: [sweet, bread, drink, salad, icecream],
   },
   {
     id: 2,
@@ -32,6 +41,13 @@ const VenueDetailData = [
     capacity: 300,
     capacityList: ['Total Guests: 500', 'Total Rooms: 40', 'Total Parking: 100'],
     facilitiesList: ['In-house DJ Present', 'Outside Decorator Allowed', 'Alcohol Not Allowed'],
+    foodOption: [
+      { id: 1, title: 'Silver', price: 1200 },
+      { id: 2, title: 'Platinum', price: 1500 },
+      { id: 3, title: 'Gold', price: 1800 },
+      { id: 4, title: 'Royal', price: 2000 },
+    ],
+    foodImages: [sweet, bread, drink, salad, icecream],
   },
   {
     id: 3,
@@ -48,6 +64,13 @@ const VenueDetailData = [
     capacity: 1000,
     capacityList: ['Total Guests: 500', 'Total Rooms: 40', 'Total Parking: 100'],
     facilitiesList: ['In-house DJ Present', 'Outside Decorator Allowed', 'Alcohol Not Allowed'],
+    foodOption: [
+      { id: 1, title: 'Silver', price: 1200 },
+      { id: 2, title: 'Platinum', price: 1500 },
+      { id: 3, title: 'Gold', price: 1800 },
+      { id: 4, title: 'Royal', price: 2000 },
+    ],
+    foodImages: [sweet, bread, drink, salad, icecream],
   },
   {
     id: 4,
@@ -64,6 +87,13 @@ const VenueDetailData = [
     capacity: 400,
     capacityList: ['Total Guests: 500', 'Total Rooms: 40', 'Total Parking: 100'],
     facilitiesList: ['In-house DJ Present', 'Outside Decorator Allowed', 'Alcohol Not Allowed'],
+    foodOption: [
+      { id: 1, title: 'Silver', price: 1200 },
+      { id: 2, title: 'Platinum', price: 1500 },
+      { id: 3, title: 'Gold', price: 1800 },
+      { id: 4, title: 'Royal', price: 2000 },
+    ],
+    foodImages: [sweet, bread, drink, salad, icecream],
   },
 ];
 
