@@ -1,7 +1,7 @@
 .editable-input {
   width: 40%;
   padding: 6px;
-  font-size: 1rem;
+  font-size: 14px;
   border: none;
   border-bottom: 2px solid #6b7280;
   outline: none;
@@ -12,11 +12,11 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 35%;
   justify-content: flex-end;
   align-items: center;
   padding: 4px 0; /* reduces height */
-  font-size: 1rem;
+  font-size: 14px;
 }
 
 .editable-input:focus {

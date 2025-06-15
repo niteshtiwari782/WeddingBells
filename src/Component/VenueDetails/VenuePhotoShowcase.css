@@ -105,8 +105,8 @@
 
   .gallery-container {
     display: flex;
-    width: 65%;
-    padding: 2rem;
+    width: 95%;
+    padding: 1rem;
     height: 400px;
     gap: 10px;
   }
@@ -131,7 +131,7 @@
 /* Large / Desktop */
 @media screen and (min-width: 900px) {
   .gallery-container {
-    height: 500px;
+    height: 410px;
   }
 
   .right-compact {

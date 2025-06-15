@@ -1,12 +1,20 @@
 .horizontal-scroll-wrapper {
   padding: 16px;
-  margin: 1rem;
+  margin: 0rem 1rem;
   border-radius: 16px;
   background-color: white;
 }
 
 .scroll-title {
-  font-size: 20px;
+  font-size: 16px;
+  margin: 0rem;
+}
+
+.optionRating {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 10px;
 }
 
 .scroll-controls {
@@ -41,6 +49,7 @@
   background: #fff;
   padding: 4px;
   border-radius: 8px;
+  justify-content: center;
   flex-shrink: 0;
   transition: transform 0.2s;
   border: 2px solid #cbd5e1;
@@ -87,6 +96,8 @@
 .cardBody {
   display: flex;
   gap: 4px;
+  height: 60%;
+  margin-top: 1rem;
   justify-content: space-between;
 }
 
@@ -107,6 +118,34 @@
   scrollbar-color: #d1d5db transparent; /* Firefox */
 }
 
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.areaOptionList {
+  width: 60%;
+  display: flex;
+  flex-direction: column; /* vertical stacking */
+  justify-content: flex-start;
+  flex-wrap: nowrap; /* must be nowrap to scroll correctly */
+  overflow-y: auto; /* vertical scroll */
+  overflow-x: hidden; /* prevent horizontal scroll */
+  gap: 8px;
+  font-size: 12px;
+  height: 80%;
+  margin-bottom: 1rem;
+  color: #6b7280;
+  line-height: 1;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #d1d5db transparent; /* Firefox */
+}
+
+.areaOptionImage {
+  width: 40%;
+  object-fit: contain;
+}
 /* Chrome, Edge, Safari scrollbar */
 .foodOptionsList::-webkit-scrollbar {
   width: 8px;
@@ -127,6 +166,14 @@
   background-color: #9ca3af; /* Tailwind gray-400 */
 }
 
+.list-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  position: relative;
+  padding-left: 12px; /* space for bullet */
+}
+
 .list-item::before {
   content: '•';
   margin: 0 4px;
@@ -143,10 +190,14 @@
 
 @media (max-width: 600px) {
   .scroll-card {
-    width: 75%;
+    width: 80%;
   }
 
   .foodOptionsList {
+    width: 50%;
+  }
+
+  .areaOptionList {
     width: 50%;
   }
 }

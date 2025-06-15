@@ -5,10 +5,11 @@ import './styles.css';
 import VenuePhotoShowcase from './VenuePhotoShowcase';
 
 import { FaStar } from 'react-icons/fa6';
+
 import { fetchVenueDetails } from '../../service/venueDetailService';
 import { formattedAmount } from '../../utility';
 import EditableDropdown from '../Dropdown';
-import HorizontalCardScroll from '../FoodOptions';
+import VenueOptionsDetails from './venueDetails';
 
 const guestMenuOptions = [100, 200, 300, 400];
 
@@ -111,14 +112,7 @@ export default function VenueDetails() {
           </div>
         </div>
       </div>
-      <div className="foodOptionContainer">
-        <HorizontalCardScroll
-          title={'Food Options'}
-          foodOptions={venueData.foodOption}
-          foodImages={venueData.foodImages}
-          handlePlatePrice={handlePlatePrice}
-        />
-      </div>
+      <VenueOptionsDetails venueData={venueData} handlePlatePrice={handlePlatePrice} />
     </div>
   );
 }
