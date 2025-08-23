@@ -1,11 +1,28 @@
 import React from 'react';
 import { Select } from 'antd';
 
-export default function SelectFilter({ label, placeholder, options, defaultValue }) {
+export default function SelectFilter({
+  label,
+  placeholder,
+  options,
+  defaultValue,
+  id,
+  setFilterObj,
+}) {
   const [value, setValue] = React.useState('');
+  const filter_key = id;
 
   const onChange = value => {
     setValue(prevState => value);
+    if (value !== 'all') {
+      setFilterObj(prevState => {
+        const newObj = {
+          ...prevState,
+          [filter_key]: value,
+        };
+        return newObj;
+      });
+    }
   };
 
   const onSearch = value => {

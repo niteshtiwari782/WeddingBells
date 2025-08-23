@@ -31,7 +31,7 @@ const locations = ['Indore', 'Bhopal', 'Ujjain', 'Dewas'];
 
 const areas = ['Palasia', 'Vijay Nagar', 'Bhawarkua', 'Rau'];
 
-const badgeValues = ['Excellent', 'Very Good', 'Good'];
+const badgeValues = ['Luxury', 'Premium', 'Average'];
 
 const dummyArray = Array.from({ length: 200 }, (_, i) => ({
   id: i + 1,

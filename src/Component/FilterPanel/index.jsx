@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles.css';
 import Filter from './Filter';
 import {
@@ -10,25 +10,64 @@ import {
 import BudgetFilter from './BudgetFilter';
 import GuestFilter from './GuestFilter';
 import { Button } from 'antd';
+import { useDispatch } from 'react-redux';
+import { setFilters } from '../../app/FilterSlice';
 
 export default function FilterPane() {
+  const dispatch = useDispatch();
+  const [filterObj, setFilterObj] = useState({});
+
+  const handeApply = () => {
+    dispatch(setFilters(filterObj));
+  };
+
   return (
     <div className="filter-panel-container">
       <div className="filter-panel-content">
-        <Filter label="City" placeholder={'Indore...'} options={cityFilterOptions} />
-        <BudgetFilter />
-        <Filter label="Property Type" placeholder={'Resort..'} options={propertyFilterOptions} />
-        <GuestFilter />
-        <Filter label="Area" placeholder={'Palasia..'} options={areaFilterOptions} />
         <Filter
+          id={'city'}
+          label="City"
+          placeholder={'Indore...'}
+          options={cityFilterOptions}
+          defaultValue={cityFilterOptions[0]}
+          filterObj={filterObj}
+          setFilterObj={setFilterObj}
+        />
+        <BudgetFilter id={'budget_range'} filterObj={filterObj} setFilterObj={setFilterObj} />
+        <Filter
+          id={'property_type'}
+          label="Property Type"
+          placeholder={'Resort..'}
+          options={propertyFilterOptions}
+          defaultValue={propertyFilterOptions[0]}
+          filterObj={filterObj}
+          setFilterObj={setFilterObj}
+        />
+        <GuestFilter id={'guest_range'} filterObj={filterObj} setFilterObj={setFilterObj} />
+        <Filter
+          id={'area'}
+          label="Area"
+          placeholder={'Palasia..'}
+          options={areaFilterOptions}
+          defaultValue={areaFilterOptions[0]}
+          filterObj={filterObj}
+          setFilterObj={setFilterObj}
+        />
+        <Filter
+          id={'property_quality'}
           label="Property Rating"
           placeholder={'Any..'}
           options={ratingFilterOptions}
-          defaultValue={ratingFilterOptions[1]}
+          defaultValue={ratingFilterOptions[0]}
+          filterObj={filterObj}
+          setFilterObj={setFilterObj}
         />
       </div>
       <div className="filter-panel-action">
-        <Button style={{ background: '#8b0000', color: 'white', fontWeight: 'bolder' }}>
+        <Button
+          style={{ background: '#8b0000', color: 'white', fontWeight: 'bolder' }}
+          onClick={handeApply}
+        >
           Search
         </Button>
       </div>

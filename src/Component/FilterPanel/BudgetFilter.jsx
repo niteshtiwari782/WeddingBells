@@ -4,45 +4,37 @@ import { Col, InputNumber, Row, Slider, Button, Popover } from 'antd';
 import './styles.css';
 import { formattedAmount } from '../../utility';
 
-const IntegerStep = () => {
-  const [inputValue, setInputValue] = useState(1000);
-  const onChange = newValue => {
-    setInputValue(newValue);
-  };
-  return (
-    <Row>
-      <Col span={12}>
-        <Slider
-          min={500}
-          max={20000}
-          onChange={onChange}
-          value={typeof inputValue === 'number' ? inputValue : 0}
-        />
-      </Col>
-      <Col span={4}>
-        <InputNumber
-          min={500}
-          max={100000}
-          style={{ margin: '0 16px' }}
-          value={inputValue}
-          onChange={onChange}
-        />
-      </Col>
-    </Row>
-  );
-};
+function roundToNearest500(num) {
+  return Math.round(num / 500) * 500;
+}
 
-const BudgetFilter = () => {
+const BudgetFilter = ({ id, setFilterObj }) => {
   const [value, setValue] = useState([1000, 3000]);
+  const filter_key = id;
+
+  const handleRangeValue = value => {
+    const newObj = [roundToNearest500(value[0]), roundToNearest500(value[1])];
+    setValue(newObj);
+    setFilterObj(prevState => {
+      const newObj2 = {
+        ...prevState,
+        [filter_key]: {
+          min: newObj[0],
+          max: newObj[1],
+        },
+      };
+      return newObj2;
+    });
+  };
 
   const filterContent = () => (
     <div className="budget-filter-container">
       <Slider
         range={{ editable: true, minCount: 1, maxCount: 5 }}
         value={value}
-        onChange={setValue}
+        onChange={handleRangeValue}
         min={500}
-        max={20000}
+        max={10000}
       />
     </div>
   );

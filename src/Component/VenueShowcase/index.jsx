@@ -1,21 +1,41 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchProducts } from '../../app/FilterSlice';
 import { FaLocationArrow, FaRegUser, FaStar } from 'react-icons/fa';
 import nonveg from '../../assets/showcaseImages/nonveg.png';
 import veg from '../../assets/showcaseImages/veg.png';
 import venueShowcase from '../../data/venueShowcase';
 import { formattedAmount } from '../../utility';
 import './VenueShowcase.css';
-import { Badge } from 'antd';
+import { Badge, Skeleton } from 'antd';
 
 const venues = venueShowcase;
 
 const VenueShowcase = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { filters, products, loading, error } = useSelector(state => state.filters);
+
+  const [venueList, setVenueList] = useState([]);
+  useEffect(() => {
+    dispatch(fetchProducts(filters));
+  }, [filters]);
+
+  useEffect(() => {
+    setVenueList(prevState => products);
+  }, [products]);
+
+  if (loading)
+    return (
+      <div style={{ padding: '10px' }}>
+        <Skeleton active />
+      </div>
+    );
+
   return (
     <div className="venue-container">
-      {venues.map(venue => (
+      {venueList.map(venue => (
         <div
           className="venue-card"
           key={venue.id}

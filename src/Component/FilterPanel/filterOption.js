@@ -1,5 +1,10 @@
 export const cityFilterOptions = [
   {
+    key: '0',
+    value: 'all',
+    label: 'All',
+  },
+  {
     key: '1',
     value: 'indore',
     label: 'Indore',
@@ -18,6 +23,11 @@ export const cityFilterOptions = [
 
 export const propertyFilterOptions = [
   {
+    key: '0',
+    value: 'all',
+    label: 'All',
+  },
+  {
     key: '1',
     value: 'resort',
     label: 'Resort',
@@ -33,38 +43,53 @@ export const propertyFilterOptions = [
     label: 'Banquet',
   },
 ];
-
+('Palasia', 'Vijay Nagar', 'Bhawarkua', 'Rau');
 export const areaFilterOptions = [
   {
+    key: '0',
+    value: 'all',
+    label: 'All',
+  },
+  {
     key: '1',
-    value: 'resort',
-    label: 'Resort',
+    value: 'palasia',
+    label: 'Palasia',
   },
   {
     key: '2',
-    value: 'garden',
-    label: 'Marriage Garden',
+    value: 'Vijay Nagar',
+    label: 'Vijay Nagar',
   },
   {
     key: '3',
-    value: 'banquet',
-    label: 'Banquet',
+    value: 'Bhawarkua',
+    label: 'Bhawarkua',
+  },
+  {
+    key: '3',
+    value: 'rau',
+    label: 'Rau',
   },
 ];
 
 export const ratingFilterOptions = [
   {
+    key: '0',
+    value: 'all',
+    label: 'All',
+  },
+  {
     key: '1',
-    value: '4',
+    value: 5,
     label: 'Luxury',
   },
   {
     key: '2',
-    value: 'garden',
+    value: 2,
     label: 'Premium',
   },
   {
-    key: '3',
+    key: 3,
     value: 'banquet',
     label: 'Average',
   },

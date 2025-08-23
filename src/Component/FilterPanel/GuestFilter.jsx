@@ -4,45 +4,37 @@ import { Col, InputNumber, Row, Slider, Button, Popover } from 'antd';
 import './styles.css';
 import { FaRegUser } from 'react-icons/fa';
 
-const IntegerStep = () => {
-  const [inputValue, setInputValue] = useState(1000);
-  const onChange = newValue => {
-    setInputValue(newValue);
-  };
-  return (
-    <Row>
-      <Col span={12}>
-        <Slider
-          min={500}
-          max={20000}
-          onChange={onChange}
-          value={typeof inputValue === 'number' ? inputValue : 0}
-        />
-      </Col>
-      <Col span={4}>
-        <InputNumber
-          min={500}
-          max={100000}
-          style={{ margin: '0 16px' }}
-          value={inputValue}
-          onChange={onChange}
-        />
-      </Col>
-    </Row>
-  );
-};
-
-const GuestFilter = () => {
+const GuestFilter = ({ id, setFilterObj }) => {
   const [value, setValue] = useState([100, 300]);
+  const filter_key = id;
+
+  function roundToNearest50(num) {
+    return Math.round(num / 50) * 50;
+  }
+
+  const handleRangeValue = value => {
+    const newObj = [roundToNearest50(value[0]), roundToNearest50(value[1])];
+    setValue(newObj);
+    setFilterObj(prevState => {
+      const newObj2 = {
+        ...prevState,
+        [filter_key]: {
+          min: newObj[0],
+          max: newObj[1],
+        },
+      };
+      return newObj2;
+    });
+  };
 
   const filterContent = () => (
     <div className="budget-filter-container">
       <Slider
         range={{ editable: true, minCount: 1, maxCount: 5 }}
         value={value}
-        onChange={setValue}
+        onChange={handleRangeValue}
         min={50}
-        max={2000}
+        max={1500}
       />
     </div>
   );
