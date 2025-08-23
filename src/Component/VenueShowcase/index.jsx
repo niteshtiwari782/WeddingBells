@@ -37,9 +37,11 @@ const VenueInformation = ({ venue }) => {
           {venue.name}
         </div>
         <div className="venueQuality">
-          {Array.from({ length: venue.venueStar }).map((_, index) => (
-            <FaStar size={5} color="gray" />
-          ))}
+          <div>
+            {Array.from({ length: venue.venueStar }).map((_, index) => (
+              <FaStar size={10} color="gray" />
+            ))}
+          </div>
           <label>{venue.venueStar} Star Venue</label>
         </div>
         {venue.isOnlyVeg && (
