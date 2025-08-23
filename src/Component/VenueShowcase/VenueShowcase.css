@@ -85,7 +85,7 @@
   display: flex;
   flex-direction: column;
   color: #6b7280;
-  font-size: 8px;
+  font-size: 10px;
   gap: 4px;
 }
 
@@ -174,14 +174,14 @@
 }
 
 .venue-price-label {
-  color: #ffc629;
+  color: #8b0000;
   font-weight: 600;
   font-size: 14px;
   text-align: right;
 }
 
 .venue-price-value {
-  color: #ffc629;
+  color: #8b0000;
   font-weight: 600;
   font-size: 1rem;
   text-align: right;
@@ -223,6 +223,9 @@
     flex: 0 1 calc(50% - 16px);
     max-width: calc(50% - 16px);
   }
+  .venueRatings {
+    font-size: 12px;
+  }
 }
 
 /* Desktop: show 3 cards per row */
@@ -231,6 +234,9 @@
     flex: 0 1 calc(33.333% - 16px);
     max-width: calc(33.333% - 16px);
   }
+  .venueRatings {
+    font-size: 12px;
+  }
 }
 
 /* Large Desktop: show 4 cards per row */
@@ -238,5 +244,9 @@
   .venue-card {
     flex: 0 1 calc(25% - 16px);
     max-width: calc(25% - 16px);
+  }
+
+  .venueRatings {
+    font-size: 12px;
   }
 }

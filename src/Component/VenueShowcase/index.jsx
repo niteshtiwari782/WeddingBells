@@ -7,6 +7,7 @@ import veg from '../../assets/showcaseImages/veg.png';
 import venueShowcase from '../../data/venueShowcase';
 import { formattedAmount } from '../../utility';
 import './VenueShowcase.css';
+import { Badge } from 'antd';
 
 const venues = venueShowcase;
 
@@ -76,13 +77,13 @@ const VenueInformation = ({ venue }) => {
             <div className="customerRatingValueContainer">
               <div className="customerRatingValue">
                 {Array.from({ length: venue.rating }).map((_, index) => (
-                  <FaStar color="#ffc629" size={12} />
+                  <FaStar color="#8b0000" size={12} />
                 ))}
               </div>
             </div>
           </div>
           <div className="reviewInfo">
-            <div className="ratingBadge">{venue.badgeValue}</div>
+            <Badge size="small" count={venue.badgeValue} showZero color="#8b0000" />
             <label>{venue.reviewsCount} Reviews</label>
           </div>
         </div>

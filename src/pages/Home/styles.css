@@ -3,3 +3,24 @@
   height: 100%;
   background-color: #f3f4f6;
 }
+
+.property-listing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 10px;
+}
+
+.bold-label {
+  font-weight: 800;
+}
+
+.sorting-btn {
+  background-color: white;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 4px;
+}

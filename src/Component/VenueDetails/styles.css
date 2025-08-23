@@ -99,7 +99,7 @@
   background-color: #003580;
   padding: 4px;
   color: white;
-  font-size: 10px;
+  font-size: 8px;
   border-radius: 999px;
 }
 
@@ -259,10 +259,6 @@
   .venueMetaDetailsContainer {
     flex-direction: column;
     font-size: 12px;
-  }
-
-  .venueDetailsRatingBadge {
-    font-size: 8px;
   }
 
   .getQuotationBtn {

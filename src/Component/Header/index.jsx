@@ -1,24 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { FaSearchLocation, FaUserPlus } from 'react-icons/fa';
+import { FaSearchLocation } from 'react-icons/fa';
+import { CgPushLeft } from 'react-icons/cg';
+import MyMehfilLogo from '../../assets/mymehfil_logo.png';
+import MyMehfilText from '../../assets/mymehfil_text.png';
 import { IoMenu } from 'react-icons/io5';
 
 import './Header.css';
 
 const Header = () => {
+  const [sidenavWidth, setSidenavWidth] = useState('0px');
+
+  const handleSideBarOpen = () => {
+    setSidenavWidth(prevState => '250px');
+  };
+
+  const handleSideBarClose = () => {
+    setSidenavWidth(prevState => '0px');
+  };
   return (
     <header className="header">
-      <div className="header-left">
+      <div
+        className="sidenav"
+        style={{
+          width: sidenavWidth,
+        }}
+      >
+        <div className="sidenav-heading">
+          <h3>Menu</h3>
+          <CgPushLeft size={20} onClick={handleSideBarClose} />
+        </div>
+        <div className="sidenav-content">
+          <div className="sidenav-item">Profile</div>
+          <div className="sidenav-item">Services</div>
+          <div className="sidenav-item">About Us</div>
+        </div>
+      </div>
+      <div className="header-left" onClick={handleSideBarOpen}>
         <IoMenu size={30} />
-        <h1 className="site-title">FindMYVenu</h1>
       </div>
 
-      <div className="header-center"></div>
+      <div className="header-center">
+        <img src={MyMehfilLogo} className="primary_logo" />
+        <img src={MyMehfilText} className="primary_text" />
+      </div>
 
       <div className="header-right">
-        <input type="text" className="search-input" placeholder="Search venues..." />
+        <input type="text" className="search-input" placeholder="Search Properties" />
         <FaSearchLocation size={25} className="search-icon" />
-        <FaUserPlus size={25} />
       </div>
     </header>
   );

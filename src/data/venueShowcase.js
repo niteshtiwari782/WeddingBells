@@ -1,5 +1,55 @@
 import { garden, goldenLight, lalit, sayaji } from '../assets/showcaseImages';
 
+const imgs = [garden, goldenLight, lalit, sayaji];
+
+function getRandomElement(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function getRandomBool() {
+  return Math.random() < 0.5;
+}
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+const venueNames = [
+  'Royal Palace',
+  'Sunshine Garden',
+  'Moonlight Banquet',
+  'Emerald Venue',
+  'Crystal Hall',
+  'Golden Terrace',
+  'Silver Oak',
+  'Maple Pavilion',
+  'Lavender Court',
+  'Rosewood Hall',
+];
+
+const locations = ['Indore', 'Bhopal', 'Ujjain', 'Dewas'];
+
+const areas = ['Palasia', 'Vijay Nagar', 'Bhawarkua', 'Rau'];
+
+const badgeValues = ['Excellent', 'Very Good', 'Good'];
+
+const dummyArray = Array.from({ length: 200 }, (_, i) => ({
+  id: i + 1,
+  name:
+    venueNames[i % venueNames.length] +
+    (i >= venueNames.length ? ` ${Math.floor(i / venueNames.length)}` : ''),
+  location: getRandomElement(locations),
+  img: getRandomElement(imgs),
+  venueStar: getRandomInt(3, 5),
+  rating: getRandomInt(3, 5),
+  isOnlyVeg: getRandomBool(),
+  area: getRandomElement(areas),
+  reviewsCount: getRandomInt(10, 60),
+  badgeValue: getRandomElement(badgeValues),
+  startPrice: getRandomInt(20000, 50000),
+  capacity: getRandomElement([100, 300, 400, 500, 1000]),
+}));
+
 const VenueShowcaseData = [
   {
     id: 1,
@@ -59,4 +109,4 @@ const VenueShowcaseData = [
   },
 ];
 
-export default VenueShowcaseData;
+export default dummyArray;

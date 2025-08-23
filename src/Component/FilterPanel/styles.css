@@ -1,54 +1,64 @@
-.FilterPanelContainer {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0 1rem 1rem 1rem;
-  gap: 1rem;
-  font-size: 12px;
-  color: #1f2937;
-}
-
-.FilterTitle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  /* border: 1px solid #3f3f46; */
-  border-radius: 9999px;
-  flex-shrink: 0;
-  background: white;
+.filter-panel-container {
+  height: max-content;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 10px;
+  margin: 20px 10px;
+  border-radius: 8px;
+  background-color: white;
 }
 
-.scroll-container {
+.filter-panel-content {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 1rem;
-  height: min-content; /* or any height you want */
-  overflow-x: auto; /* enables vertical scrolling */
-  padding: 12px 12px 12px 0px;
-  scroll-behavior: smooth; /* smooth scroll */
 }
-
-/* Optional: individual item styling */
-.scroll-item {
+.filter-panel-action {
   display: flex;
-  gap: 8px;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  background: white;
-  flex-shrink: 0;
-  /* border: 1px solid #3f3f46; */
-  border-radius: 9999px;
+  margin: 10px;
+  justify-content: flex-end;
+}
+.dropdown-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 15%;
 }
 
-@media (max-width: 600px) {
-  .FilterTitle {
-    width: 20%;
-    flex-shrink: 0;
+.filter-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.budget-filter-btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: min-content;
+  width: 15%;
+}
+
+.filter-summary {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-summary-label {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.filter-summary-value {
+  font-size: 16px;
+}
+
+@media (max-width: 500px) {
+  .budget-filter-btn-container {
+    width: 40%;
   }
-  .scroll-container {
-    width: 80%;
+
+  .dropdown-filter {
+    width: 40%;
   }
 }
