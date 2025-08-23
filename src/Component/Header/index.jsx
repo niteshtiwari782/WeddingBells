@@ -7,6 +7,7 @@ import MyMehfilText from '../../assets/mymehfil_text.png';
 import { IoMenu } from 'react-icons/io5';
 
 import './Header.css';
+import { Input, Popover } from 'antd';
 
 const Header = () => {
   const [sidenavWidth, setSidenavWidth] = useState('0px');
@@ -47,9 +48,19 @@ const Header = () => {
 
       <div className="header-right">
         <input type="text" className="search-input" placeholder="Search Properties" />
-        <FaSearchLocation size={25} className="search-icon" />
+        <Popover className="search-icon" placement="bottom" content={SearchBox} trigger="click">
+          <FaSearchLocation size={25} className="search-icon" />
+        </Popover>
       </div>
     </header>
+  );
+};
+
+const SearchBox = () => {
+  return (
+    <div>
+      <Input.Search placeholder="Filled" variant="filled" />
+    </div>
   );
 };
 

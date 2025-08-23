@@ -22,7 +22,6 @@
     transform 0.2s ease,
     box-shadow 0.2s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  font-family: 'Inter', sans-serif;
   display: flex;
   flex-direction: column;
 }
@@ -51,7 +50,6 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 8px;
-  font-family: 'Inter', sans-serif;
 }
 
 .venue-primaryInfo {
@@ -69,7 +67,7 @@
   gap: 4px;
   flex-direction: row;
   align-items: center;
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .venue-area {
@@ -78,7 +76,7 @@
   gap: 4px;
   flex-direction: row;
   align-items: center;
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .venueRatings {
@@ -139,7 +137,7 @@
 }
 
 .venue-location {
-  font-size: 0.9rem;
+  font-size: 10px;
   color: #6b7280; /* muted gray */
 }
 
@@ -149,7 +147,7 @@
   gap: 4px;
   flex-direction: row;
   align-items: center;
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .venue-capacity-value {
@@ -214,7 +212,7 @@
   gap: 4px;
   flex-direction: row;
   align-items: center;
-  font-size: 8px;
+  font-size: 10px;
 }
 
 /* Tablet: show 2 cards per row */
