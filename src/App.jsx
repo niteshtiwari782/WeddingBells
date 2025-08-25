@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import './App.css';
 import Header from './Component/Header';
 import VenueDetail from './Component/VenueDetails';
+import VenueAreaListing from './pages/Venue';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/venue" element={<VenueDetail />} />
+        <Route path="/venue" element={<VenueAreaListing />} />
+        <Route path="/venue_dev" element={<VenueDetail />} />
       </Routes>
     </Router>
   );

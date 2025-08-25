@@ -66,7 +66,7 @@ export const areaFilterOptions = [
     label: 'Bhawarkua',
   },
   {
-    key: '3',
+    key: '4',
     value: 'rau',
     label: 'Rau',
   },
@@ -85,12 +85,12 @@ export const ratingFilterOptions = [
   },
   {
     key: '2',
-    value: 2,
+    value: 4,
     label: 'Premium',
   },
   {
-    key: 3,
-    value: 'banquet',
+    key: '3',
+    value: 3,
     label: 'Average',
   },
 ];

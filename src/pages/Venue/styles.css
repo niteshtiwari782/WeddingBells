@@ -1,0 +1,129 @@
+.area-listiing-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  height: 40px;
+  background-color: white;
+}
+
+.area-listing-header-title {
+  font-size: 22px;
+}
+
+.area-listing-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f3f4f6;
+}
+
+.area-card-container {
+  border-radius: 12px;
+  flex: 0 1 96%; /* Default: full width */
+  max-width: 100%;
+  text-align: center;
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.area-card-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.carousel_container {
+  height: 300px;
+  overflow: hidden;
+}
+
+.area-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.area-meta-info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.area-meta-left-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+}
+
+.area-meta-right-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+  align-items: flex-end;
+}
+
+.rating--title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 12px;
+}
+
+.area-title {
+  font-size: 18px;
+}
+
+.area-sub-title {
+  font-size: 12px;
+}
+
+.area-sub-label {
+  font-size: 10px;
+}
+
+.area-price {
+  font-size: 20px;
+  color: #8b0000;
+}
+
+@media (max-width: 450px) {
+  .carousel_container {
+    height: 200px;
+  }
+
+  .area-image {
+    height: 200px;
+  }
+}
+
+@media (min-width: 640px) {
+  .area-card-container {
+    flex: 0 1 calc(50% - 16px);
+    max-width: calc(50% - 16px);
+  }
+}
+
+/* Desktop: show 3 cards per row */
+@media (min-width: 1024px) {
+  .area-card-container {
+    flex: 0 1 calc(33.333% - 16px);
+    max-width: calc(33.333% - 16px);
+  }
+}
+
+/* Large Desktop: show 4 cards per row */
+@media (min-width: 1280px) {
+  .area-card-container {
+    flex: 0 1 calc(25% - 16px);
+    max-width: calc(25% - 16px);
+  }
+}
