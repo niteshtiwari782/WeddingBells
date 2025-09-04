@@ -65,7 +65,7 @@ export default function FilterPane() {
       </div>
       <div className="filter-panel-action">
         <Button
-          style={{ background: '#8b0000', color: 'white', fontWeight: 'bolder' }}
+          style={{ background: '#ec407a', color: 'white', fontWeight: 'bolder' }}
           onClick={handeApply}
         >
           Search

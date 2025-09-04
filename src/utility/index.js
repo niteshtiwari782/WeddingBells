@@ -5,3 +5,7 @@ export const formattedAmount = amount => {
     maximumFractionDigits: 0,
   }).format(amount);
 };
+
+export function shortenString(str) {
+  return str?.length > 8 ? str.slice(0, 8) + '...' : str;
+}

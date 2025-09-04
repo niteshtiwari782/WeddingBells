@@ -5,7 +5,6 @@ import venueShowcase from '../data/venueShowcase';
 // Async thunk to fetch products based on filters
 export const fetchProducts = createAsyncThunk('filters/fetchProducts', async filters => {
   const query = new URLSearchParams(filters).toString();
-  console.log('result fetching for fites', filters);
   return new Promise(resolve => {
     setTimeout(() => {
       resolve(filterData(venueShowcase, filters)); // venueShowcase is your data to return

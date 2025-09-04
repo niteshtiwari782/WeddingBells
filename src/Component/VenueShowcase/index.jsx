@@ -91,13 +91,13 @@ const VenueInformation = ({ venue }) => {
             <div className="customerRatingValueContainer">
               <div className="customerRatingValue">
                 {Array.from({ length: venue.rating }).map((_, index) => (
-                  <FaStar color="#8b0000" size={12} />
+                  <FaStar color="#ec407a" size={12} />
                 ))}
               </div>
             </div>
           </div>
           <div className="reviewInfo">
-            <Badge size="small" count={venue.badgeValue} showZero color="#8b0000" />
+            <Badge size="small" count={venue.badgeValue} showZero color="#ec407a" />
             <label>{venue.reviewsCount} Reviews</label>
           </div>
         </div>

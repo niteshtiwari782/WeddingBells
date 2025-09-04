@@ -172,14 +172,14 @@
 }
 
 .venue-price-label {
-  color: #8b0000;
+  color: #ec407a;
   font-weight: 600;
   font-size: 14px;
   text-align: right;
 }
 
 .venue-price-value {
-  color: #8b0000;
+  color: #ec407a;
   font-weight: 600;
   font-size: 1rem;
   text-align: right;

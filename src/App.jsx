@@ -6,6 +6,7 @@ import './App.css';
 import Header from './Component/Header';
 import VenueDetail from './Component/VenueDetails';
 import VenueAreaListing from './pages/Venue';
+import AreaDetail from './pages/AreaDetail';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/venue" element={<VenueAreaListing />} />
         <Route path="/venue_dev" element={<VenueDetail />} />
+        <Route path="/area_detail" element={<AreaDetail />} />
       </Routes>
     </Router>
   );
