@@ -77,7 +77,7 @@ const VenueInformation = ({ venue }) => {
         <div className="venue-capacity">
           <div className="venue-capacity-title">Capacity :</div>
           <div className="venue-capacity-value">
-            <div style={{ fontSize: '10px' }}>{venue.capacity}</div>
+            <div>{venue.capacity}</div>
             <div style={{ paddingTop: '3px' }}>
               <FaRegUser />
             </div>

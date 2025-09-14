@@ -7,7 +7,27 @@
 }
 
 .area-listing-header-title {
-  font-size: 22px;
+  font-size: 20px;
+}
+
+.appointment-btn {
+  background: #ec407a;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.area-listing-heading {
+  padding: 0.5rem 0rem 0rem 1rem;
+}
+
+.venue-info-tab-container {
+  height: max-content;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 10px;
+  margin: 20px 10px;
+  border-radius: 8px;
+  background-color: white;
 }
 
 .area-listing-container {
@@ -15,8 +35,6 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 1rem;
-  padding: 1rem;
-  background-color: #f3f4f6;
 }
 
 .area-card-container {
@@ -52,7 +70,6 @@
 .area-meta-info-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 10px;
 }
 
@@ -73,13 +90,15 @@
 
 .rating--title {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  gap: 4px;
+  color: #6b7280;
+  justify-content: flex-end;
+  align-items: center;
   font-size: 12px;
 }
 
 .area-title {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .area-sub-title {
@@ -87,12 +106,115 @@
 }
 
 .area-sub-label {
-  font-size: 10px;
+  font-size: 12px;
+  padding-bottom: 2px;
+}
+
+.area-meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .area-price {
   font-size: 20px;
   color: #ec407a;
+}
+
+.review-date {
+  font-size: 12px;
+}
+
+.food-menu-list-container {
+  overflow-y: auto;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 1rem 0rem;
+  justify-content: center;
+}
+
+.food-menu-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 1rem;
+}
+
+.food-menu-name {
+  font-size: 20px;
+}
+
+.food-menu-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ec407a;
+}
+
+.food-menu-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 1rem;
+  font-size: 12px;
+}
+
+.food-menu-rating {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+}
+
+.food-rating-text {
+  margin-bottom: 4px;
+}
+
+.food-menu-item-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0rem 1rem;
+  font-size: 12px;
+  gap: 5px;
+  height: 100px;
+  overflow-y: auto;
+}
+
+.food-menu-item {
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  gap: 2px;
+}
+
+.venue-detail-facilities {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  font-size: 12px;
+}
+
+.venue-detail-facilities-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 12px;
+  gap: 10px;
+  overflow-y: auto;
+}
+
+.facilities-item {
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 2px;
 }
 
 @media (max-width: 450px) {

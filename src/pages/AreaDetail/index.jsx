@@ -1,24 +1,29 @@
 import { Button, Card, Carousel, ConfigProvider } from 'antd';
 import React, { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 
 import './styles.css';
-import { fetchVenueDetails } from '../../service/venueDetailService';
-import { FaStar, FaMapMarkerAlt, FaRegDotCircle } from 'react-icons/fa';
+import { fetchAreaDetails, fetchVenueDetails } from '../../service/venueDetailService';
+import { FaStar, FaMapMarkerAlt } from 'react-icons/fa';
 import { formattedAmount, shortenString } from '../../utility';
 import AreaInfoTab from './AreaInfoTab';
+
 export default function AreaDetail() {
   const [areaDetail, setAreaDetail] = useState([]);
   const [venueDetail, setVenueDetail] = useState([]);
+  const [searchParams] = useSearchParams();
+  const parent_id = searchParams.get('pid');
+  const self_id = searchParams.get('sid');
   useEffect(() => {
-    const res = fetchVenueDetails(3);
+    const res = fetchVenueDetails(parseInt(parent_id));
+    const areaDetail = fetchAreaDetails(res[0]?.Areas, parseInt(self_id));
     setVenueDetail(prevState => res[0]);
+    setAreaDetail(prevState => areaDetail[0]);
   }, []);
 
   useEffect(() => {
-    if (venueDetail?.Areas?.length >= 2) {
-      setAreaDetail(prevState => venueDetail?.Areas[2]);
-    }
-  }, [venueDetail]);
+    console.log(areaDetail);
+  }, [areaDetail]);
 
   return (
     <div>

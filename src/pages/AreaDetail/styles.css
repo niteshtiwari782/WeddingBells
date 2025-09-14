@@ -7,7 +7,7 @@
 }
 
 .area-listing-header-title {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .area-info-container {
@@ -29,7 +29,7 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .areadetail-content-middle {
@@ -67,7 +67,7 @@
 }
 
 .areadetail-name {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .areadetail-price-sub {
@@ -75,17 +75,8 @@
 }
 
 .areadetail-price-primary {
-  font-size: 18px;
+  font-size: 20px;
   color: #ec407a;
-}
-
-.facilities-item {
-  width: 50%;
-  font-size: 10px;
-  text-align: center;
-  align-items: center;
-  display: flex;
-  gap: 4px;
 }
 
 .area-info-tab-container {

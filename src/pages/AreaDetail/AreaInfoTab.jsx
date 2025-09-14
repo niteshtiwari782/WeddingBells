@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Tabs } from 'antd';
 import { FaRegDotCircle } from 'react-icons/fa';
+import FacilitiesList from '../Venue/facilitesList';
 
 export default function AreaInfoTab({ facilities }) {
   const items = [
@@ -27,20 +28,4 @@ export default function AreaInfoTab({ facilities }) {
     console.log(key);
   };
   return <Tabs defaultActiveKey={currentTab} items={items} onChange={onChange} />;
-}
-
-function FacilitiesList({ facilities }) {
-  return (
-    <div className="areadetail-content-left">
-      <div className="areadetail-facilities">
-        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-          {facilities?.map((item, i) => (
-            <div key={i} className="facilities-item">
-              <FaRegDotCircle /> {item}
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
 }

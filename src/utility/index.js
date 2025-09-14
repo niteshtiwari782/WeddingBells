@@ -7,5 +7,5 @@ export const formattedAmount = amount => {
 };
 
 export function shortenString(str) {
-  return str?.length > 8 ? str.slice(0, 8) + '...' : str;
+  return str?.length > 12 ? str.slice(0, 12) + '...' : str;
 }

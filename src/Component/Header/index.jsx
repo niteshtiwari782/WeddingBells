@@ -41,10 +41,10 @@ const Header = () => {
         <IoMenu size={30} />
       </div>
 
-      <div className="header-center">
+      <a className="header-center" href="/">
         <img src={MyMehfilLogo} className="primary_logo" />
         <img src={MyMehfilText} className="primary_text" />
-      </div>
+      </a>
 
       <div className="header-right">
         <input type="text" className="search-input" placeholder="Search Properties" />

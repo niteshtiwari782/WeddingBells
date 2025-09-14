@@ -1,9 +1,7 @@
 .venue-container {
   width: 95%;
-  max-width: 1280px;
   overflow-y: auto;
   height: fit-content;
-  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
@@ -67,7 +65,7 @@
   gap: 4px;
   flex-direction: row;
   align-items: center;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .venue-area {
@@ -76,7 +74,7 @@
   gap: 4px;
   flex-direction: row;
   align-items: center;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .venueRatings {
@@ -147,12 +145,12 @@
   gap: 4px;
   flex-direction: row;
   align-items: center;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .venue-capacity-value {
   display: flex;
-  font-size: 10px;
+  font-size: 12px;
   flex-direction: row;
   align-items: center;
   gap: 4px;
@@ -181,12 +179,12 @@
 .venue-price-value {
   color: #ec407a;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 20px;
   text-align: right;
 }
 
 .venue-price-subtext {
-  font-size: 8px;
+  font-size: 12px;
   text-align: right;
   color: #6b7280;
 }
@@ -226,14 +224,18 @@
   }
 }
 
-/* Desktop: show 3 cards per row */
+/* Desktop: show 2 cards per row */
 @media (min-width: 1024px) {
   .venue-card {
-    flex: 0 1 calc(33.333% - 16px);
-    max-width: calc(33.333% - 16px);
+    flex: 0 1 calc(50% - 16px);
+    max-width: calc(50% - 16px);
   }
   .venueRatings {
     font-size: 12px;
+  }
+
+  .venue-card-image {
+    height: 240px;
   }
 }
 
@@ -242,6 +244,10 @@
   .venue-card {
     flex: 0 1 calc(25% - 16px);
     max-width: calc(25% - 16px);
+  }
+
+  .venue-card-image {
+    height: 300px;
   }
 
   .venueRatings {

@@ -33,9 +33,11 @@ const VenueDetailData = [
           '4 Drinks',
           '2 Chinese or Italians Dishes',
         ],
+        foodRating: 4,
       },
       {
         id: 2,
+        foodRating: 4,
         title: 'Platinum',
         price: 1500,
         options: [
@@ -52,6 +54,7 @@ const VenueDetailData = [
       {
         id: 3,
         title: 'Gold',
+        foodRating: 4,
         price: 1800,
         options: [
           '5 Veg Subzi',
@@ -67,6 +70,7 @@ const VenueDetailData = [
       {
         id: 4,
         title: 'Royal',
+        foodRating: 4,
         price: 2000,
         options: [
           '5 Veg Subzi',
@@ -115,7 +119,7 @@ const VenueDetailData = [
         area: '4,000 SqFt',
       },
       {
-        id: 3,
+        id: 4,
         name: 'Pool Bay',
         images: [pool, garden, goldenLight, lalit, sayaji],
         rating: 5,
@@ -236,7 +240,7 @@ const VenueDetailData = [
         area: '4,000 SqFt',
       },
       {
-        id: 3,
+        id: 4,
         name: 'Pool Bay',
         images: [pool, garden, goldenLight, lalit, sayaji],
         rating: 5,
@@ -357,7 +361,7 @@ const VenueDetailData = [
         area: '4,000 SqFt',
       },
       {
-        id: 3,
+        id: 4,
         name: 'Pool Bay',
         images: [pool, garden, goldenLight, lalit, sayaji],
         rating: 5,
@@ -478,7 +482,7 @@ const VenueDetailData = [
         area: '4,000 SqFt',
       },
       {
-        id: 3,
+        id: 4,
         name: 'Pool Bay',
         images: [pool, garden, goldenLight, lalit, sayaji],
         rating: 5,
