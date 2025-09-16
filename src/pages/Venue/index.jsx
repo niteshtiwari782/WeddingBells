@@ -59,7 +59,7 @@ export default function VenueAreaListing() {
   return (
     <div>
       <div className="area-listiing-header">
-        <div className="area-listing-header-title">{shortenString(venueName)}</div>
+        <div className="area-listing-header-title">{venueName}</div>
         <div>
           <Button className="appointment-btn">Book an Appointment</Button>
         </div>

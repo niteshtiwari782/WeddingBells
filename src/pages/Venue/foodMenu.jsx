@@ -1,12 +1,13 @@
 import React from 'react';
 import { formattedAmount } from '../../utility';
 import { Divider } from 'antd';
-import { FaRegDotCircle, FaStar } from 'react-icons/fa';
+import { FaStar } from 'react-icons/fa';
 
 import nonveg from '../../assets/showcaseImages/nonveg.png';
 import veg from '../../assets/showcaseImages/veg.png';
 
 import './styles.css';
+import { GoDotFill } from 'react-icons/go';
 
 export default function FoodMenu({ foodMenuList }) {
   return (
@@ -38,7 +39,7 @@ function RenderFoodMenuCard({ menu }) {
       <div className="food-menu-item-container">
         {options?.map((item, i) => (
           <div key={i} className="food-menu-item">
-            <FaRegDotCircle /> {item}
+            <GoDotFill /> {item}
           </div>
         ))}
       </div>

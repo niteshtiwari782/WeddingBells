@@ -86,8 +86,34 @@
   background-color: white;
 }
 
+.area-detial-images-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+
+.area-detail-main-images {
+  width: 80%;
+}
+
+.area-detail-side-images {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 @media (max-width: 450px) {
   .areadetail-image {
     height: 200px;
+  }
+
+  .area-detail-main-images {
+    width: 100%;
+  }
+
+  .area-detial-images-container {
+    flex-direction: column;
   }
 }
