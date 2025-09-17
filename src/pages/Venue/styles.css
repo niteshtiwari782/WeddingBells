@@ -173,13 +173,14 @@
 
 .food-menu-item-container {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 0rem 1rem;
   font-size: 12px;
   gap: 5px;
-  height: 100px;
+  height: 120px;
   overflow-y: auto;
 }
 
@@ -202,6 +203,7 @@
 
 .venue-detail-facilities-container {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;

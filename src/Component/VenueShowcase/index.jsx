@@ -83,6 +83,14 @@ const VenueInformation = ({ venue }) => {
             </div>
           </div>
         </div>
+        <div className="venue-speciality">
+          <div className="venue-speciality-item">
+            <Badge size="small" color="blue" count={'Excellent Food'} showZero />
+          </div>
+          <div className="venue-speciality-item">
+            <Badge size="small" color="blue" count={'Excellent Service'} showZero />
+          </div>
+        </div>
       </div>
       <div className="venue-secondaryInfo">
         <div className="venueRatings">
