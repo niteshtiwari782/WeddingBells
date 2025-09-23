@@ -1,45 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchProducts } from '../../app/FilterSlice';
 import { FaLocationArrow, FaRegUser, FaStar } from 'react-icons/fa';
 import nonveg from '../../assets/showcaseImages/nonveg.png';
 import veg from '../../assets/showcaseImages/veg.png';
-import venueShowcase from '../../data/venueShowcase';
 import { formattedAmount } from '../../utility';
 import './VenueShowcase.css';
-import { Badge, Skeleton } from 'antd';
+import { Badge, Tag } from 'antd';
 
-const venues = venueShowcase;
-
-const VenueShowcase = () => {
+const VenueShowcase = ({ venueList, handleLoadingFlag }) => {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const { filters, products, loading, error } = useSelector(state => state.filters);
-
-  const [venueList, setVenueList] = useState([]);
-  useEffect(() => {
-    dispatch(fetchProducts(filters));
-  }, [filters]);
-
-  useEffect(() => {
-    setVenueList(prevState => products);
-  }, [products]);
-
-  if (loading)
-    return (
-      <div style={{ padding: '10px' }}>
-        <Skeleton active />
-      </div>
-    );
 
   return (
     <div className="venue-container">
-      {venueList.map(venue => (
+      {venueList?.map(venue => (
         <div
           className="venue-card"
-          key={venue.id}
-          onClick={() => navigate(`/venue?id=${venue.id}`)}
+          key={venue._id}
+          onClick={() => navigate(`/venue?id=${venue._id}`)}
         >
           <img src={venue.img} className="venue-card-image" />
           <VenueInformation venue={venue} />
@@ -72,7 +49,7 @@ const VenueInformation = ({ venue }) => {
         )}
         <div className="venue-area">
           <FaLocationArrow size={10} />
-          {venue.area}
+          {venue.location}
         </div>
         <div className="venue-capacity">
           <div className="venue-capacity-title">Capacity :</div>
@@ -84,12 +61,13 @@ const VenueInformation = ({ venue }) => {
           </div>
         </div>
         <div className="venue-speciality">
-          <div className="venue-speciality-item">
-            <Badge size="small" color="blue" count={'Excellent Food'} showZero />
-          </div>
-          <div className="venue-speciality-item">
-            <Badge size="small" color="blue" count={'Excellent Service'} showZero />
-          </div>
+          {venue.speciality.map(spcl => {
+            return (
+              <div className="venue-speciality-item">
+                <Tag color="red">{spcl}</Tag>
+              </div>
+            );
+          })}
         </div>
       </div>
       <div className="venue-secondaryInfo">

@@ -82,7 +82,7 @@
   flex-direction: column;
   color: #6b7280;
   font-size: 12px;
-  gap: 4px;
+  gap: 2px;
 }
 
 .ratingsInfo {
@@ -131,7 +131,6 @@
   display: block;
   cursor: default;
   text-align: left;
-  color: #1f2937; /* dark gray text */
 }
 
 .venue-location {
@@ -158,24 +157,16 @@
 
 .venue-speciality {
   display: flex;
-  gap: 4px;
-  flex-direction: row;
-  align-items: center;
-  font-size: 12px;
 }
 
 .venue-speciality-item {
-  display: flex;
-  gap: 4px;
-  color: black;
-  flex-direction: row;
-  align-items: center;
+  font-size: 10px !important;
 }
 
 .venue-secondaryInfo {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  justify-content: space-between;
   padding: 14px 8px 8px 8px;
 }
 

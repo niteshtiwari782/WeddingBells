@@ -1,5 +1,6 @@
-export { default as garden } from './garden.jpg';
-export { default as goldenLight } from './goldenLight.jpg';
-export { default as goldenRoom } from './golderRoom.jpg';
-export { default as lalit } from './lalit.jpg';
-export { default as sayaji } from './sayaji.jpg';
+export const garden =
+  'https://res.cloudinary.com/dgxkokx70/image/upload/v1758265025/garden_buysli.jpg';
+export const lalit =
+  'https://res.cloudinary.com/dgxkokx70/image/upload/v1758265025/lalit_xu2itr.jpg';
+export const sayaji =
+  'https://res.cloudinary.com/dgxkokx70/image/upload/v1758265025/sayaji_z28ddo.jpg';

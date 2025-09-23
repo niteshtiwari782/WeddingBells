@@ -35,7 +35,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1rem;
 }
 
@@ -134,7 +134,7 @@
   flex-wrap: wrap;
   gap: 16px;
   padding: 1rem 0rem;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .food-menu-title {
@@ -153,7 +153,7 @@
   color: #ec407a;
 }
 
-.food-menu-footer {
+.food-menu-header {
   display: flex;
   justify-content: space-between;
   padding: 0rem 1rem;
@@ -209,6 +209,7 @@
   align-items: flex-start;
   font-size: 12px;
   gap: 10px;
+  height: 500px;
   overflow-y: auto;
 }
 
@@ -226,6 +227,13 @@
     height: 200px;
   }
 
+  .area-listing-container {
+    justify-content: center;
+  }
+
+  .food-menu-list-container {
+    justify-content: center;
+  }
   .area-image {
     height: 200px;
   }

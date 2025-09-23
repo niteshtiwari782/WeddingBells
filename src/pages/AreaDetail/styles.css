@@ -12,6 +12,10 @@
 
 .area-info-container {
   padding: 10px;
+  border-radius: 12px;
+  margin: 10px;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .areadetail-image {
@@ -46,6 +50,12 @@
   align-items: flex-end;
 }
 
+.areadetail-badge {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
 .areadetail-price {
   display: flex;
   flex-direction: column;
@@ -54,9 +64,9 @@
 
 .areadetail-sub-title {
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
   font-size: 12px;
+  gap: 4px;
 }
 
 .areadetail-facilities {
@@ -75,8 +85,24 @@
 }
 
 .areadetail-price-primary {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.package-price-color {
+  color: #ec407a !important;
+  font-size: 16px;
+}
+
+.final-price-modal {
+  font-size: 12px;
+}
+
+.final-price-heading {
   font-size: 20px;
-  color: #ec407a;
+  display: flex;
+  justify-content: space-between;
 }
 
 .area-info-tab-container {
@@ -90,27 +116,74 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .area-detail-main-images {
   width: 80%;
+  height: 500px;
 }
 
 .area-detail-side-images {
-  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
+}
+
+.side-image {
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.option-menu {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
+.option-menu-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightgray; /* #cf1322 */
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+  padding: 5px;
+  border-radius: 6px;
+  align-items: flex-start;
+}
+
+.menu-item-selected {
+  box-shadow:
+    0 0 0 3px rgba(207, 19, 34, 0.55),
+    /* crisp outer ring hugging border */ 0 10px 18px -8px rgba(207, 19, 34, 0.22);
+}
+
+.menu-sub-title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.menu-sub-price {
+  font-size: 14px;
+  color: #ec407a;
+}
 @media (max-width: 450px) {
+  .area-detail-side-images {
+    display: none;
+  }
   .areadetail-image {
     height: 200px;
   }
 
   .area-detail-main-images {
     width: 100%;
+    height: fit-content;
   }
 
   .area-detial-images-container {

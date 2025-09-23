@@ -1,15 +1,11 @@
 // filtersSlice.js
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import venueShowcase from '../data/venueShowcase';
+import { fetchVenueListing } from '../service/venueDetailService';
 
 // Async thunk to fetch products based on filters
 export const fetchProducts = createAsyncThunk('filters/fetchProducts', async filters => {
   const query = new URLSearchParams(filters).toString();
-  return new Promise(resolve => {
-    setTimeout(() => {
-      resolve(filterData(venueShowcase, filters)); // venueShowcase is your data to return
-    }, 2000);
-  });
+  return await fetchVenueListing(query, 1);
 });
 
 const filterData = (data, filter) => {
@@ -52,12 +48,16 @@ const filtersSlice = createSlice({
   initialState: {
     filters: { category: '', priceRange: '' },
     products: [],
+    page: 1,
     loading: false,
     error: null,
   },
   reducers: {
     setFilters(state, action) {
       state.filters = action.payload;
+    },
+    setPage(state, action) {
+      state.page = action.payload;
     },
   },
   extraReducers: builder => {
@@ -77,5 +77,6 @@ const filtersSlice = createSlice({
   },
 });
 
-export const { setFilters } = filtersSlice.actions;
+export const { setFilters, setPage } = filtersSlice.actions;
+
 export default filtersSlice.reducer;

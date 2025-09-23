@@ -1,8 +1,8 @@
-import { garden, goldenLight, lalit, sayaji } from '../assets/showcaseImages';
+import { garden, lalit, sayaji } from '../assets/showcaseImages';
 
 import { bread, drink, icecream, salad, sweet } from '../assets/foodMenu';
 
-import { banquet, jalsa, lake, pool } from '../assets/areaPhotos';
+import { banquet, lake, pool } from '../assets/areaPhotos';
 
 const VenueDetailData = [
   {
@@ -91,7 +91,7 @@ const VenueDetailData = [
       {
         id: 1,
         name: 'Banquet Hall',
-        images: [banquet, garden, goldenLight, lalit, sayaji],
+        images: [garden, lalit, sayaji],
         rating: 4,
         minCap: 300,
         maxCap: 500,
@@ -101,7 +101,7 @@ const VenueDetailData = [
       {
         id: 2,
         name: 'Jalsa Garden',
-        images: [jalsa, garden, goldenLight, lalit, sayaji],
+        images: [garden, lalit, sayaji],
         rating: 5,
         minCap: 150,
         maxCap: 300,
@@ -111,7 +111,7 @@ const VenueDetailData = [
       {
         id: 3,
         name: 'Lake Side',
-        images: [lake, garden, goldenLight, lalit, sayaji],
+        images: [lake, garden, lalit, sayaji],
         rating: 5,
         minCap: 100,
         maxCap: 250,
@@ -121,7 +121,7 @@ const VenueDetailData = [
       {
         id: 4,
         name: 'Pool Bay',
-        images: [pool, garden, goldenLight, lalit, sayaji],
+        images: [pool, garden, lalit, sayaji],
         rating: 5,
         minCap: 30,
         maxCap: 50,
@@ -212,7 +212,7 @@ const VenueDetailData = [
       {
         id: 1,
         name: 'Banquet Hall',
-        images: [banquet, garden, goldenLight, lalit, sayaji],
+        images: [banquet, garden, lalit, sayaji],
         rating: 4,
         minCap: 300,
         maxCap: 500,
@@ -222,7 +222,7 @@ const VenueDetailData = [
       {
         id: 2,
         name: 'Jalsa Garden',
-        images: [jalsa, garden, goldenLight, lalit, sayaji],
+        images: [garden, lalit, sayaji],
         rating: 5,
         minCap: 150,
         maxCap: 300,
@@ -232,7 +232,7 @@ const VenueDetailData = [
       {
         id: 3,
         name: 'Lake Side',
-        images: [lake, garden, goldenLight, lalit, sayaji],
+        images: [lake, garden, lalit, sayaji],
         rating: 5,
         minCap: 100,
         maxCap: 250,
@@ -242,7 +242,7 @@ const VenueDetailData = [
       {
         id: 4,
         name: 'Pool Bay',
-        images: [pool, garden, goldenLight, lalit, sayaji],
+        images: [pool, garden, lalit, sayaji],
         rating: 5,
         minCap: 30,
         maxCap: 50,
@@ -333,7 +333,7 @@ const VenueDetailData = [
       {
         id: 1,
         name: 'Banquet Hall',
-        images: [banquet, garden, goldenLight, lalit, sayaji],
+        images: [banquet, garden, lalit, sayaji],
         rating: 4,
         minCap: 300,
         maxCap: 500,
@@ -343,7 +343,7 @@ const VenueDetailData = [
       {
         id: 2,
         name: 'Jalsa Garden',
-        images: [jalsa, garden, goldenLight, lalit, sayaji],
+        images: [garden, lalit, sayaji],
         rating: 5,
         minCap: 150,
         maxCap: 300,
@@ -353,7 +353,7 @@ const VenueDetailData = [
       {
         id: 3,
         name: 'Lake Side',
-        images: [lake, garden, goldenLight, lalit, sayaji],
+        images: [lake, garden, lalit, sayaji],
         rating: 5,
         minCap: 100,
         maxCap: 250,
@@ -363,7 +363,7 @@ const VenueDetailData = [
       {
         id: 4,
         name: 'Pool Bay',
-        images: [pool, garden, goldenLight, lalit, sayaji],
+        images: [pool, garden, lalit, sayaji],
         rating: 5,
         minCap: 30,
         maxCap: 50,
@@ -376,7 +376,7 @@ const VenueDetailData = [
     id: 4,
     name: 'Emerald Venue',
     location: 'Dewas',
-    img: goldenLight,
+    img: garden,
     venueStar: 3,
     rating: 5,
     isOnlyVeg: true,
@@ -454,7 +454,7 @@ const VenueDetailData = [
       {
         id: 1,
         name: 'Banquet Hall',
-        images: [banquet, garden, goldenLight, lalit, sayaji],
+        images: [garden, lalit, sayaji],
         rating: 4,
         minCap: 300,
         maxCap: 500,
@@ -464,7 +464,7 @@ const VenueDetailData = [
       {
         id: 2,
         name: 'Jalsa Garden',
-        images: [jalsa, garden, goldenLight, lalit, sayaji],
+        images: [garden, lalit, sayaji],
         rating: 5,
         minCap: 150,
         maxCap: 300,
@@ -474,7 +474,7 @@ const VenueDetailData = [
       {
         id: 3,
         name: 'Lake Side',
-        images: [lake, garden, goldenLight, lalit, sayaji],
+        images: [garden, lalit, sayaji],
         rating: 5,
         minCap: 100,
         maxCap: 250,
@@ -484,7 +484,7 @@ const VenueDetailData = [
       {
         id: 4,
         name: 'Pool Bay',
-        images: [pool, garden, goldenLight, lalit, sayaji],
+        images: [garden, lalit, sayaji],
         rating: 5,
         minCap: 30,
         maxCap: 50,

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 import './styles.css';
-import VenuePhotoShowcase from './VenuePhotoShowcase';
+// import VenuePhotoShowcase from './VenuePhotoShowcase';
 
 import { FaStar } from 'react-icons/fa6';
 
@@ -47,7 +47,7 @@ export default function VenueDetails() {
   return (
     <div className="venueDetailContainer">
       <div className="venueMetaDetailsContainer">
-        <VenuePhotoShowcase />
+        {/* <VenuePhotoShowcase /> */}
         <div className="venueMetaDetailsContent">
           <div className="venueNameNRatingContainer">
             <div className="venueDetailTitle">

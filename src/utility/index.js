@@ -6,6 +6,8 @@ export const formattedAmount = amount => {
   }).format(amount);
 };
 
+export const formatCommas = (n, locale = 'en-IN') => new Intl.NumberFormat(locale).format(n);
+
 export function shortenString(str) {
   return str?.length > 12 ? str.slice(0, 12) + '...' : str;
 }
