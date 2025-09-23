@@ -26,7 +26,7 @@ export const fetchVenueListing = async (filters, currentPage) => {
         };
       });
   } catch (err) {
-    throw new Error((message = err.msg));
+    throw new Error(err);
   }
 };
 
@@ -37,7 +37,7 @@ export const fetchPackages = async venue_id => {
       return data;
     });
   } catch (err) {
-    throw new Error((message = err.msg));
+    throw new Error(err);
   }
 };
 
@@ -65,7 +65,7 @@ export const fetchFoodDetails = async venue_id => {
         return data;
       });
   } catch (err) {
-    throw new Error((message = err.msg));
+    throw new Error(err);
   }
 };
 
@@ -76,7 +76,7 @@ export const fetchReviews = async venue_id => {
       return data;
     });
   } catch (err) {
-    throw new Error((message = err.msg));
+    throw new Error(err);
   }
 };
 
@@ -89,7 +89,7 @@ export const fetchFacilities = async venue_id => {
         return data;
       });
   } catch (err) {
-    throw new Error((message = err.msg));
+    throw new Error(err);
   }
 };
 
