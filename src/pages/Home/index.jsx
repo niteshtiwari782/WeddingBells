@@ -46,10 +46,10 @@ export default function HomePage() {
       <FilterPanel />
       <div className="property-listing">
         <span className="bold-label">Listing 153 Properties</span>
-        <div className="sorting-btn">
+        {/* <div className="sorting-btn">
           <span>Sort</span>
           <FaSort />
-        </div>
+        </div> */}
       </div>
       <VenueShowcase venueList={venueList} />
       <Pagination handlePagination={handlePagination} isDisabled={isDisabled} />

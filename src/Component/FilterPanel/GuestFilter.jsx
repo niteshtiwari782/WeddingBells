@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Col, InputNumber, Row, Slider, Button, Popover } from 'antd';
+import { Slider, Button, Popover } from 'antd';
 
 import './styles.css';
 import { FaRegUser } from 'react-icons/fa';
