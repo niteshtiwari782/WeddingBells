@@ -5,11 +5,11 @@ import './styles.css';
 import { formattedAmount } from '../../utility';
 
 function roundToNearest500(num) {
-  return Math.round(num / 500) * 500;
+  return Math.round(num / 5000) * 5000;
 }
 
 const BudgetFilter = ({ id, setFilterObj }) => {
-  const [value, setValue] = useState([1000, 3000]);
+  const [value, setValue] = useState([10000, 50000]);
   const filter_key = id;
 
   const handleRangeValue = value => {
@@ -33,8 +33,8 @@ const BudgetFilter = ({ id, setFilterObj }) => {
         range={{ editable: true, minCount: 1, maxCount: 5 }}
         value={value}
         onChange={handleRangeValue}
-        min={500}
-        max={10000}
+        min={10000}
+        max={300000}
       />
     </div>
   );
@@ -50,7 +50,7 @@ const BudgetFilter = ({ id, setFilterObj }) => {
   return (
     <Popover placement="bottom" content={filterContent} title={FilterSummary} trigger="click">
       <div className="budget-filter-btn-container">
-        <label className="filter-label">Budget</label>
+        <label className="filter-label">Budget / 100 Guests</label>
         <Button className="budget-filter-btn">
           {formattedAmount(value[0])} - {formattedAmount(value[1])}
         </Button>

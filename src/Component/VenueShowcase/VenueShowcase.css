@@ -220,6 +220,25 @@
   font-size: 10px;
 }
 
+.card-filter-option {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 10px 10px;
+  gap: 1rem;
+}
+
+.card-filter-option-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card-filter-option-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
 /* Tablet: show 2 cards per row */
 @media (min-width: 640px) {
   .venue-card {

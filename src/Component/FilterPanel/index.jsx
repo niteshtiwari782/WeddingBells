@@ -4,6 +4,7 @@ import Filter from './Filter';
 import {
   areaFilterOptions,
   cityFilterOptions,
+  foodType,
   propertyFilterOptions,
   ratingFilterOptions,
 } from './filterOption';
@@ -137,6 +138,16 @@ export default function FilterPane() {
                 setFilterObj={setFilterObj}
                 showSearch={false}
               />
+              <Filter
+                id={'food_type'}
+                label="Food Type"
+                placeholder={'Any..'}
+                options={foodType}
+                defaultValue={foodType[0]}
+                filterObj={filterObj}
+                setFilterObj={setFilterObj}
+                showSearch={false}
+              />
             </div>
             <div className="filter-panel-action">
               <Button
@@ -196,6 +207,16 @@ export default function FilterPane() {
           filterObj={filterObj}
           setFilterObj={setFilterObj}
           showSearch={true}
+        />
+        <Filter
+          id={'food_type'}
+          label="Food Type"
+          placeholder={'Any..'}
+          options={foodType}
+          defaultValue={foodType[0]}
+          filterObj={filterObj}
+          setFilterObj={setFilterObj}
+          showSearch={false}
         />
       </div>
       <div className="filter-panel-action">

@@ -12,16 +12,76 @@ const VenueShowcase = ({ venueList, handleLoadingFlag }) => {
 
   return (
     <div className="venue-container">
-      {venueList?.map(venue => (
-        <div
-          className="venue-card"
-          key={venue._id}
-          onClick={() => navigate(`/venue?id=${venue._id}`)}
-        >
-          <img src={venue.img} className="venue-card-image" />
-          <VenueInformation venue={venue} />
-        </div>
-      ))}
+      {venueList?.map((venue, idx) => {
+        if (idx % 3 == 2 && idx < 10) {
+          return (
+            <div
+              className="venue-card"
+              key={venue._id}
+              // onClick={() => navigate(`/venue?id=${venue._id}`)}
+            >
+              <div className="card-filter-option">
+                <div className="card-filter-option-title">Whats your Budget for 100 Guests ?</div>
+                <div className="card-filter-option-list">
+                  <Tag color="red">{formattedAmount(20000)}</Tag>
+                  <Tag color="red">{formattedAmount(40000)}</Tag>
+                  <Tag color="red" onClick={() => navigate(`/venue?id=${venue._id}`)}>
+                    {formattedAmount(60000)}
+                  </Tag>
+                  <Tag color="red">{formattedAmount(100000)}</Tag>
+                  <Tag color="red">{formattedAmount(130000)}</Tag>
+                  <Tag color="red">{formattedAmount(170000)}</Tag>
+                  <Tag color="red">
+                    {' '}
+                    {'>'} {formattedAmount(200000)}
+                  </Tag>
+                </div>
+              </div>
+
+              <div className="card-filter-option">
+                <div className="card-filter-option-title">How Many Guests will be there ?</div>
+                <div className="card-filter-option-list">
+                  <Tag color="red">
+                    {200}-{300}
+                  </Tag>
+                  <Tag color="red">
+                    {350}-{450}
+                  </Tag>
+                  <Tag color="red">
+                    {500}-{600}
+                  </Tag>
+                  <Tag color="red">
+                    {650}- {900}
+                  </Tag>
+                  <Tag color="red">
+                    {'>'} {1000}
+                  </Tag>
+                </div>
+              </div>
+
+              <div className="card-filter-option">
+                <div className="card-filter-option-title">Whats your preferred venue type?</div>
+                <div className="card-filter-option-list">
+                  <Tag color="red">Banquet Hall</Tag>
+                  <Tag color="red">Resort</Tag>
+                  <Tag color="red">Garden</Tag>
+                  <Tag color="red">Pool Side</Tag>
+                </div>
+              </div>
+            </div>
+          );
+        }
+        return (
+          <div
+            className="venue-card"
+            key={venue._id}
+            onClick={() => navigate(`/venue?id=${venue._id}`)}
+          >
+            <img src={venue.img} className="venue-card-image" />
+            <VenueInformation venue={venue} />
+          </div>
+        );
+      })}
     </div>
   );
 };

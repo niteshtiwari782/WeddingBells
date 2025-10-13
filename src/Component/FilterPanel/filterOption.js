@@ -43,7 +43,6 @@ export const propertyFilterOptions = [
     label: 'Banquet',
   },
 ];
-('Palasia', 'Vijay Nagar', 'Bhawarkua', 'Rau');
 export const areaFilterOptions = [
   {
     key: '0',
@@ -92,5 +91,18 @@ export const ratingFilterOptions = [
     key: '3',
     value: 3,
     label: 'Average',
+  },
+];
+
+export const foodType = [
+  {
+    key: '0',
+    value: 'veg',
+    label: 'Veg',
+  },
+  {
+    key: '1',
+    value: 'nonVeg',
+    label: 'Non-veg',
   },
 ];
