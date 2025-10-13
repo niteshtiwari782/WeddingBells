@@ -13,7 +13,7 @@ const VenueShowcase = ({ venueList, handleLoadingFlag }) => {
   return (
     <div className="venue-container">
       {venueList?.map((venue, idx) => {
-        if (idx % 3 == 2 && idx < 10) {
+        if (idx % 8 == 2 && idx < 10) {
           return (
             <div
               className="venue-card"
