@@ -103,6 +103,7 @@ export default function FilterPane() {
                 defaultValue={cityFilterOptions[0]}
                 filterObj={filterObj}
                 setFilterObj={setFilterObj}
+                showSearch={false}
               />
               <BudgetFilter id={'budget_range'} filterObj={filterObj} setFilterObj={setFilterObj} />
               <Filter
@@ -113,6 +114,7 @@ export default function FilterPane() {
                 defaultValue={propertyFilterOptions[0]}
                 filterObj={filterObj}
                 setFilterObj={setFilterObj}
+                showSearch={false}
               />
               <GuestFilter id={'guest_range'} filterObj={filterObj} setFilterObj={setFilterObj} />
               <Filter
@@ -123,6 +125,7 @@ export default function FilterPane() {
                 defaultValue={areaFilterOptions[0]}
                 filterObj={filterObj}
                 setFilterObj={setFilterObj}
+                showSearch={false}
               />
               <Filter
                 id={'property_quality'}
@@ -132,6 +135,7 @@ export default function FilterPane() {
                 defaultValue={ratingFilterOptions[0]}
                 filterObj={filterObj}
                 setFilterObj={setFilterObj}
+                showSearch={false}
               />
             </div>
             <div className="filter-panel-action">
@@ -159,6 +163,7 @@ export default function FilterPane() {
           defaultValue={cityFilterOptions[0]}
           filterObj={filterObj}
           setFilterObj={setFilterObj}
+          showSearch={true}
         />
         <BudgetFilter id={'budget_range'} filterObj={filterObj} setFilterObj={setFilterObj} />
         <Filter
@@ -169,6 +174,7 @@ export default function FilterPane() {
           defaultValue={propertyFilterOptions[0]}
           filterObj={filterObj}
           setFilterObj={setFilterObj}
+          showSearch={true}
         />
         <GuestFilter id={'guest_range'} filterObj={filterObj} setFilterObj={setFilterObj} />
         <Filter
@@ -179,6 +185,7 @@ export default function FilterPane() {
           defaultValue={areaFilterOptions[0]}
           filterObj={filterObj}
           setFilterObj={setFilterObj}
+          showSearch={true}
         />
         <Filter
           id={'property_quality'}
@@ -188,6 +195,7 @@ export default function FilterPane() {
           defaultValue={ratingFilterOptions[0]}
           filterObj={filterObj}
           setFilterObj={setFilterObj}
+          showSearch={true}
         />
       </div>
       <div className="filter-panel-action">

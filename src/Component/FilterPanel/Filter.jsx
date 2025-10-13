@@ -8,6 +8,7 @@ export default function SelectFilter({
   defaultValue,
   id,
   setFilterObj,
+  showSearch,
 }) {
   const [value, setValue] = React.useState('');
   const filter_key = id;
@@ -33,7 +34,7 @@ export default function SelectFilter({
     <div className="dropdown-filter">
       <label className="filter-label">{label}</label>
       <Select
-        showSearch
+        showSearch={showSearch}
         defaultValue={defaultValue?.value}
         placeholder={placeholder}
         optionFilterProp="label"
