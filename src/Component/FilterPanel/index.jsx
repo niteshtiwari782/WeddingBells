@@ -55,32 +55,32 @@ export default function FilterPane() {
         <div className="filter-panel-content">
           {filterCount > 0 && (
             <div className="pill pill--outline" onClick={openDrawer}>
-              Filter <FaChevronDown /> {filterCount}
+              Filter <FaChevronDown className="chev" size={12} /> {filterCount}
             </div>
           )}
           {filterCount == 0 && (
             <div className="pill" onClick={openDrawer}>
-              Filter <FaChevronDown />
+              Filter <FaChevronDown className="chev" size={12} />
             </div>
           )}
           {filterObj.hasOwnProperty('budget_range') && (
             <div className="pill pill--outline" onClick={openDrawer}>
-              Budget <FaChevronDown />
+              Budget <FaChevronDown className="chev" size={12} />
             </div>
           )}
           {!filterObj.hasOwnProperty('budget_range') && (
             <div className="pill" onClick={openDrawer}>
-              Budget <FaChevronDown />
+              Budget <FaChevronDown className="chev" size={12} />
             </div>
           )}
           {filterObj.hasOwnProperty('guest_range') && (
             <div className="pill pill--outline" onClick={openDrawer}>
-              Guest <FaChevronDown />
+              Guest <FaChevronDown className="chev" size={12} />
             </div>
           )}
           {!filterObj.hasOwnProperty('guest_range') && (
             <div className="pill" onClick={openDrawer}>
-              Guest <FaChevronDown />
+              Guest <FaChevronDown className="chev" size={12} />
             </div>
           )}
         </div>

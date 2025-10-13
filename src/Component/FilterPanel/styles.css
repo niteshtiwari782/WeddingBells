@@ -83,6 +83,10 @@
   color: #ec407a;
 }
 
+.chev {
+  opacity: 0.7;
+}
+
 @media (max-width: 500px) {
   .budget-filter-btn-container {
     width: 40%;
