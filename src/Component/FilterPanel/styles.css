@@ -67,14 +67,14 @@
   display: inline-flex; /* horizontal sizing and centering */
   align-items: center; /* vertical centering */
   gap: 0.5rem; /* space between icon/text */
-  padding: 0.25rem 0.75rem; /* top/bottom, left/right */
+  padding: 0.5rem 0.75rem; /* top/bottom, left/right */
   border-radius: 9999px; /* fully rounded */
   font-size: 0.875rem; /* 14px */
   line-height: 1; /* compact height */
   border: 1px solid #1f2937; /* optional border baseline */
   background: #f5f7fa; /* light background */
   color: #1f2937; /* dark text */
-  font-weight: 500;
+  font-weight: 300;
 }
 
 .pill--outline {
